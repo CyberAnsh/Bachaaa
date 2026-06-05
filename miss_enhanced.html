@@ -1,0 +1,2556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miss Noor Fatima Jiii 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="dns-prefetch" href="https://files.catbox.moe">
+<link rel="dns-prefetch" href="https://i.supaimg.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root {
+  --pink: #e8879a;
+  --rose: #c75070;
+  --blush: #fce8ee;
+  --blush2: #f8d0dc;
+  --petal: #fdf3f6;
+  --gold: #c9a96e;
+  --rosegold: #b76e79;
+  --rosegold2: #d4a0a8;
+  --cream: #fff8f2;
+  --moonlight: #f9f0ff;
+  --dark: #2c1018;
+  --ink: #3a1825;
+  --muted: rgba(58,24,37,0.55);
+  --glass: rgba(255,255,255,0.45);
+  --gborder: rgba(183,110,121,0.25);
+  --glass-heavy: rgba(255,245,248,0.6);
+}
+
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+
+body {
+  will-change: auto;
+  font-family: 'Lato', sans-serif;
+  background: linear-gradient(135deg, #fff8f2 0%, #fdf3f6 30%, #fce8ee 60%, #fff5f8 100%);
+  background-attachment: fixed;
+  color: var(--ink);
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before {
+  content:'';
+  position:fixed; inset:0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events:none; z-index:0;
+  opacity:0.4;
+}
+
+/* ── FLOATING PETALS ── */
+.petals { position:fixed; inset:0; pointer-events:none; z-index:1; overflow:hidden; }
+.petal {
+  position:absolute;
+  font-size:clamp(10px,2vw,18px);
+  opacity:0;
+  animation: petalFall var(--d) var(--delay) ease-in infinite;
+}
+@keyframes petalFall {
+  0%   { opacity:0; transform:translateY(-5vh) rotate(0deg) scale(0.8); }
+  10%  { opacity:0.7; }
+  90%  { opacity:0.3; }
+  100% { opacity:0; transform:translateY(105vh) rotate(540deg) scale(1.1); }
+}
+
+/* ── DIVIDER ── */
+.divider {
+  width:100%; height:1px;
+  background:linear-gradient(to right, transparent, rgba(199,80,112,0.2), transparent);
+}
+
+/* ── SECTION LABEL ── */
+.tag {
+  display:inline-block;
+  font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase;
+  color:var(--rose); font-weight:700;
+  background:rgba(199,80,112,0.08);
+  border:1px solid rgba(199,80,112,0.2);
+  border-radius:50px; padding:4px 14px;
+  margin-bottom:1rem;
+}
+
+.section-title {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(2rem,5vw,3.2rem);
+  font-weight:400;
+  color:var(--ink);
+  line-height:1.2;
+  margin-bottom:0.5rem;
+}
+.section-title em { font-style:italic; color:var(--rose); }
+
+/* ════════════════════════════
+   HERO
+════════════════════════════ */
+.hero {
+  min-height:100vh;
+  position:relative;
+  display:flex; flex-direction:column;
+  align-items:center; justify-content:center;
+  overflow:hidden; text-align:center;
+  padding:2rem;
+}
+
+.hero-bg {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 80% 60% at 20% 20%, rgba(232,135,154,0.22), transparent),
+    radial-gradient(ellipse 60% 80% at 80% 80%, rgba(183,110,121,0.18), transparent),
+    radial-gradient(ellipse 50% 50% at 50% 0%, rgba(249,240,255,0.5), transparent),
+    radial-gradient(ellipse 100% 100% at 50% 50%, #fff8f2, #fce8ee);
+}
+
+/* Big decorative circle */
+.hero-circle {
+  position:absolute;
+  width:min(600px,90vw); height:min(600px,90vw);
+  border-radius:50%;
+  border:1px solid rgba(199,80,112,0.12);
+  top:50%; left:50%; transform:translate(-50%,-50%);
+  animation:rotateSlow 40s linear infinite;
+}
+.hero-circle::before {
+  content:'';
+  position:absolute; inset:-30px;
+  border-radius:50%;
+  border:1px dashed rgba(199,80,112,0.08);
+}
+@keyframes rotateSlow { to { transform:translate(-50%,-50%) rotate(360deg); } }
+
+.hero-dot {
+  position:absolute; width:8px; height:8px; border-radius:50%;
+  background:var(--pink); top:0; left:50%; transform:translateX(-50%);
+  box-shadow:0 0 12px rgba(232,135,154,0.6);
+}
+
+.hero-content { position:relative; z-index:2; }
+
+.hero-eyebrow {
+  font-family:'Lato', sans-serif;
+  font-size:0.65rem; letter-spacing:0.4em; text-transform:uppercase;
+  color:var(--rose); margin-bottom:1.5rem;
+  animation:fadeUp 1s 0.2s both;
+}
+
+.hero-names {
+  font-family:'Great Vibes', cursive;
+  font-size:clamp(3.5rem,12vw,8rem);
+  color:var(--ink);
+  line-height:1;
+  animation:fadeUp 1s 0.4s both;
+  text-shadow:0 4px 30px rgba(199,80,112,0.15);
+}
+.hero-names .amp {
+  color:var(--rose);
+  font-size:0.7em;
+  display:inline-block;
+  animation:heartbeat 2s ease-in-out infinite;
+  margin:0 0.2em;
+}
+
+.hero-sub {
+  font-family:'Playfair Display', serif;
+  font-style:italic;
+  font-size:clamp(0.9rem,2.5vw,1.2rem);
+  color:var(--muted);
+  margin-top:1.2rem;
+  animation:fadeUp 1s 0.6s both;
+}
+
+/* Counter */
+.hero-counter {
+  display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;
+  margin-top:2.5rem;
+  animation:fadeUp 1s 0.8s both;
+}
+.c-box {
+  background:var(--glass);
+  border:1px solid var(--gborder);
+  backdrop-filter:blur(6px);
+  border-radius:16px; padding:1rem 1.4rem;
+  text-align:center; min-width:80px;
+}
+.c-num {
+  font-family:'Playfair Display', serif;
+  font-size:2rem; color:var(--rose); display:block; line-height:1;
+}
+.c-lbl {
+  font-size:0.58rem; text-transform:uppercase;
+  letter-spacing:0.18em; color:var(--muted); margin-top:4px;
+}
+
+/* Scroll hint */
+.scroll-cue {
+  position:absolute; bottom:2rem; left:50%; transform:translateX(-50%);
+  display:flex; flex-direction:column; align-items:center; gap:6px;
+  animation:fadeUp 1s 1.2s both, nudge 2s 2.5s ease-in-out infinite;
+  color:var(--muted); font-size:0.6rem; letter-spacing:0.2em; text-transform:uppercase;
+}
+.scroll-line { width:1px; height:44px; background:linear-gradient(to bottom,transparent,var(--rose)); }
+@keyframes nudge { 0%,100%{transform:translateX(-50%) translateY(0)} 50%{transform:translateX(-50%) translateY(6px)} }
+
+/* ════════════════════════════
+   GALLERY
+════════════════════════════ */
+.gallery-section { padding:6rem 2rem; max-width:1100px; margin:0 auto; }
+
+.gallery-grid {
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  grid-template-rows:auto;
+  gap:1rem; margin-top:3rem;
+}
+.g-card {
+  border-radius:20px; overflow:hidden;
+  background:white;
+  box-shadow:0 4px 24px rgba(199,80,112,0.08);
+  border:1px solid rgba(199,80,112,0.1);
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  cursor:pointer;
+}
+.g-card:hover { transform:translateY(-8px) rotate(-0.5deg); box-shadow:0 16px 48px rgba(199,80,112,0.18); }
+.g-card:nth-child(1) { grid-column:1/6; }
+.g-card:nth-child(2) { grid-column:6/13; }
+.g-card:nth-child(3) { grid-column:1/5; }
+.g-card:nth-child(4) { grid-column:5/9; }
+.g-card:nth-child(5) { grid-column:9/13; }
+
+.g-img {
+  width:100%;
+  overflow:hidden;
+}
+
+.g-img img {
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.g-caption { padding:1rem 1.2rem; }
+.g-caption h4 { font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink); margin-bottom:3px; }
+.g-caption p { font-size:0.75rem; color:var(--muted); }
+
+@media(max-width:700px){
+  .g-card:nth-child(n) { grid-column:1/-1; }
+}
+
+/* ════════════════════════════
+   LOVE LETTER
+════════════════════════════ */
+.letter-section { padding:5rem 2rem; }
+.letter-wrap { max-width:680px; margin:3rem auto 0; position:relative; }
+.letter-shadow {
+  position:absolute; inset:12px -8px -12px 8px;
+  background:rgba(199,80,112,0.08);
+  border-radius:4px; transform:rotate(1.5deg);
+}
+.letter-paper {
+  position:relative; background:#fffdf8;
+  border-radius:3px; padding:3.5rem 4rem;
+  box-shadow:0 8px 40px rgba(0,0,0,0.08);
+  border:1px solid rgba(0,0,0,0.05);
+  transform:rotate(-0.4deg);
+}
+.letter-paper::before {
+  content:'';
+  position:absolute; left:4rem; top:0; bottom:0;
+  width:1px; background:rgba(199,80,112,0.2);
+}
+.letter-paper::after {
+  content:'';
+  position:absolute; inset:0;
+  background:repeating-linear-gradient(transparent,transparent 31px,rgba(0,0,0,0.04) 31px,rgba(0,0,0,0.04) 32px);
+  pointer-events:none;
+}
+.letter-date { font-family:'Lato',sans-serif; font-size:0.8rem; color:#a07060; text-align:right; margin-bottom:2rem; position:relative; z-index:1; }
+.letter-body {
+  will-change: auto;
+  font-family:'Great Vibes', cursive;
+  font-size:1.5rem; line-height:2;
+  color:#3d2b2b; position:relative; z-index:1;
+}
+.letter-sig { font-family:'Great Vibes',cursive; font-size:2rem; color:var(--rose); text-align:right; margin-top:2rem; position:relative; z-index:1; }
+
+/* ════════════════════════════
+   TIMELINE
+════════════════════════════ */
+.timeline-section { padding:6rem 2rem; max-width:800px; margin:0 auto; }
+
+.timeline { position:relative; margin-top:3rem; }
+.timeline::before {
+  content:''; position:absolute; left:20px; top:0; bottom:0;
+  width:1px; background:linear-gradient(to bottom,transparent,var(--pink),transparent);
+}
+.tl-item {
+  display:flex; gap:2rem; padding-bottom:3rem;
+  opacity:0; transform:translateX(-24px);
+  transition:all 0.7s ease;
+}
+.tl-item.vis { opacity:1; transform:translateX(0); }
+.tl-left { flex-shrink:0; width:40px; display:flex; flex-direction:column; align-items:center; }
+.tl-dot {
+  width:12px; height:12px; border-radius:50%;
+  background:var(--rose); margin-top:6px; flex-shrink:0;
+  box-shadow:0 0 0 4px rgba(199,80,112,0.15), 0 0 12px rgba(199,80,112,0.3);
+}
+.tl-right {}
+.tl-date { font-size:0.62rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--gold); margin-bottom:6px; }
+.tl-title { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--ink); margin-bottom:6px; }
+.tl-desc { font-size:0.88rem; color:var(--muted); line-height:1.75; }
+
+/* ════════════════════════════
+   REASONS
+════════════════════════════ */
+.reasons-section { padding:6rem 2rem; max-width:1100px; margin:0 auto; }
+
+.reasons-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:1.2rem; margin-top:3rem; }
+.reason-card {
+  background:white;
+  border:1px solid rgba(199,80,112,0.1);
+  border-radius:20px; padding:2rem;
+  transition:all 0.3s ease; position:relative; overflow:hidden;
+}
+.reason-card::after {
+  content:'';
+  position:absolute; bottom:0; left:0; right:0; height:3px;
+  background:linear-gradient(to right,var(--rose),var(--gold));
+  transform:scaleX(0); transform-origin:left;
+  transition:transform 0.4s ease;
+}
+.reason-card:hover { transform:translateY(-6px); box-shadow:0 12px 40px rgba(199,80,112,0.14); }
+.reason-card:hover::after { transform:scaleX(1); }
+.r-icon { font-size:2rem; margin-bottom:1rem; }
+.r-text { font-family:'Playfair Display',serif; font-size:1.05rem; color:var(--ink); line-height:1.6; }
+
+/* ════════════════════════════
+   PLAYLIST
+════════════════════════════ */
+.playlist-section { padding:6rem 2rem; max-width:800px; margin:0 auto; }
+
+.playlist { display:flex; flex-direction:column; gap:0.8rem; margin-top:2rem; }
+.s-card {
+  display:flex; align-items:center; gap:1.2rem;
+  background:white; border:1px solid rgba(199,80,112,0.1);
+  border-radius:14px; padding:1rem 1.4rem;
+  cursor:pointer; transition:all 0.3s ease;
+}
+.s-card:hover, .s-card.playing { background:var(--blush); border-color:rgba(199,80,112,0.3); transform:translateX(6px); }
+.s-art { width:48px; height:48px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-size:1.3rem; flex-shrink:0; }
+.s-info { flex:1; }
+.s-name { font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink); }
+.s-artist { font-size:0.72rem; color:var(--muted); margin-top:2px; }
+.s-mem { font-size:0.72rem; color:var(--rose); font-style:italic; text-align:right; max-width:150px; }
+.s-btn {
+  width:32px; height:32px; border-radius:50%;
+  background:var(--rose); color:white;
+  display:flex; align-items:center; justify-content:center;
+  font-size:0.75rem; flex-shrink:0; padding-left:2px;
+  transition:all 0.2s;
+}
+.s-card:hover .s-btn, .s-card.playing .s-btn { background:var(--dark); transform:scale(1.1); }
+
+.spotify-wrap {
+  margin-top:1.8rem; background:white;
+  border:1px solid rgba(199,80,112,0.15);
+  border-radius:20px; padding:1.5rem;
+}
+.snp { display:flex; align-items:center; gap:0.8rem; margin-bottom:0.5rem; }
+.snp-label { font-size:0.62rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--rose); font-weight:700; }
+.snp-bars { display:flex; align-items:flex-end; gap:3px; height:14px; }
+.snp-bars span { width:3px; background:var(--rose); border-radius:2px; animation:sbar 0.8s ease-in-out infinite; }
+.snp-bars span:nth-child(1){height:60%;animation-delay:0s}
+.snp-bars span:nth-child(2){height:100%;animation-delay:.2s}
+.snp-bars span:nth-child(3){height:40%;animation-delay:.1s}
+.snp-bars span:nth-child(4){height:80%;animation-delay:.3s}
+@keyframes sbar { 0%,100%{transform:scaleY(0.4)} 50%{transform:scaleY(1)} }
+
+/* ════════════════════════════
+   SPIN WHEEL
+════════════════════════════ */
+.wheel-section { padding:6rem 2rem; max-width:600px; margin:0 auto; text-align:center; }
+.wheel-wrap { position:relative; width:300px; height:300px; margin:3rem auto 1.5rem; }
+.wheel-ptr { position:absolute; top:-16px; left:50%; transform:translateX(-50%); font-size:1.8rem; color:var(--rose); filter:drop-shadow(0 2px 6px rgba(199,80,112,0.4)); }
+.spin-btn {
+  background:linear-gradient(135deg,var(--rose),#a03050);
+  border:none; color:white; padding:0.9rem 2.8rem;
+  border-radius:50px; font-family:'Lato',sans-serif; font-size:0.95rem; font-weight:700;
+  cursor:pointer; letter-spacing:0.05em;
+  transition:all 0.3s; box-shadow:0 6px 24px rgba(199,80,112,0.3);
+}
+.spin-btn:hover { transform:translateY(-3px); box-shadow:0 12px 32px rgba(199,80,112,0.4); }
+.spin-result { margin-top:1.2rem; font-family:'Playfair Display',serif; font-size:1.4rem; font-style:italic; color:var(--rose); min-height:2rem; }
+
+/* ════════════════════════════
+   SCRATCH CARD
+════════════════════════════ */
+..scratch-section { 
+  padding: 6rem 2rem; 
+  max-width: 500px; 
+  margin: 0 auto; 
+  text-align: center; 
+}
+
+/* 🛠️ FIXED: Standard 9:16 Vertical Ratio Box */
+.scratch-outer { 
+  position: relative; 
+  width: 240px; 
+  height: 426px; 
+  margin: 3rem auto 0; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  box-shadow: 0 12px 40px rgba(199,80,112,0.2); 
+  cursor: crosshair; 
+}
+
+/* 🛠️ FIXED: Isko flexbox se hata kar clean absolute wrapper banaya taaki photo full screen fit ho */
+.scratch-inner {
+  position: absolute; 
+  inset: 0;
+  background: #fff;
+}
+
+/* 🌟 ADDED: Taaki aapki di hui image bina stretch huye perfect scale par automatic fit ho jaye */
+.scratch-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sc-emoji { font-size: 4rem; }
+
+.sc-text { 
+  font-family: 'Playfair Display', serif; 
+  font-size: 1.2rem; 
+  color: var(--rose); 
+  font-style: italic; 
+  line-height: 1.6; 
+}
+
+.sc-sub { font-size: 0.78rem; color: var(--muted); }
+
+/* 🛠️ FIXED: Canvas ko layout mein top layer par stretch kiya width/height automatic lock karne ke liye */
+#scratchCvs { 
+  position: absolute; 
+  inset: 0; 
+  border-radius: 20px; 
+  touch-action: none; 
+  width: 100%;
+  height: 100%;
+}
+
+.scratch-hint { 
+  margin-top: 1rem; 
+  font-size: 0.68rem; 
+  text-transform: uppercase; 
+  letter-spacing: 0.18em; 
+  color: var(--muted); 
+}
+
+.scratch-pct { 
+  margin-top: 0.4rem; 
+  font-family: 'Playfair Display', serif; 
+  font-style: italic; 
+  color: var(--rose); 
+  min-height: 1.4rem; 
+}
+
+/* ════════════════════════════
+   COMPATIBILITY
+════════════════════════════ */
+.compat-section { padding:6rem 2rem; max-width:640px; margin:0 auto; }
+.compat-box {
+  background:white; border:1px solid rgba(199,80,112,0.12);
+  border-radius:24px; padding:2.5rem; margin-top:3rem;
+}
+.cq { margin-bottom:2rem; }
+.cq-label { font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink); display:block; margin-bottom:0.8rem; }
+.cq-opts { display:flex; flex-wrap:wrap; gap:0.5rem; }
+.cq-opt {
+  background:var(--petal); border:1px solid rgba(199,80,112,0.2);
+  border-radius:50px; padding:0.4rem 1rem;
+  font-size:0.8rem; color:var(--ink); cursor:pointer;
+  transition:all 0.2s; user-select:none;
+}
+.cq-opt:hover { border-color:var(--rose); background:var(--blush); }
+.cq-opt.sel { background:rgba(199,80,112,0.12); border-color:var(--rose); color:var(--rose); font-weight:700; }
+.calc-btn {
+  width:100%; background:linear-gradient(135deg,var(--rose),#a03050);
+  border:none; color:white; padding:1rem; border-radius:50px;
+  font-family:'Lato',sans-serif; font-size:0.95rem; font-weight:700;
+  cursor:pointer; transition:all 0.3s; margin-top:0.5rem;
+}
+.calc-btn:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(199,80,112,0.3); }
+.compat-res { display:none; margin-top:2rem; text-align:center; }
+.compat-res.show { display:block; }
+.ring-wrap { width:120px; height:120px; margin:0 auto 1.5rem; position:relative; }
+.ring-wrap svg { transform:rotate(-90deg); }
+.rb { fill:none; stroke:rgba(199,80,112,0.15); stroke-width:8; }
+.rf { fill:none; stroke:url(#rg); stroke-width:8; stroke-linecap:round; stroke-dasharray:314; stroke-dashoffset:314; transition:stroke-dashoffset 1.5s cubic-bezier(.16,1,.3,1); }
+.ring-num { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-size:2rem; color:var(--rose); font-weight:700; }
+.cv { font-family:'Playfair Display',serif; font-size:1.5rem; font-style:italic; color:var(--ink); margin-bottom:0.6rem; }
+.cd { font-size:0.87rem; color:var(--muted); line-height:1.7; }
+.c-bars { margin-top:1.8rem; display:flex; flex-direction:column; gap:1rem; text-align:left; }
+.cbi .cbh { display:flex; justify-content:space-between; margin-bottom:5px; }
+.cbi .cbl { font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink); }
+.cbi .cbp { font-size:0.78rem; color:var(--rose); font-weight:700; }
+.cbt { height:5px; background:rgba(199,80,112,0.12); border-radius:100px; overflow:hidden; }
+.cbf { height:100%; background:linear-gradient(to right,var(--rose),var(--gold)); border-radius:100px; width:0; transition:width 1.5s cubic-bezier(.16,1,.3,1); }
+
+/* ════════════════════════════
+   SURPRISES
+════════════════════════════ */
+.surprises-section { padding:6rem 2rem; max-width:900px; margin:0 auto; }
+.surprises-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:1rem; margin-top:3rem; }
+.sup-card {
+  background:white; border:1px solid rgba(199,80,112,0.12);
+  border-radius:18px; padding:2rem 1.5rem; text-align:center;
+  cursor:pointer; transition:all 0.3s; position:relative; overflow:hidden;
+}
+.sup-card:hover { transform:scale(1.04); box-shadow:0 10px 30px rgba(199,80,112,0.15); }
+.sup-card.rev { background:var(--blush); border-color:var(--rose); }
+.sup-icon { font-size:2.2rem; margin-bottom:0.8rem; }
+.sup-hint { font-size:0.78rem; color:var(--muted); }
+.sup-msg { display:none; font-family:'Playfair Display',serif; font-size:0.95rem; color:var(--ink); font-style:italic; line-height:1.6; }
+.sup-card.rev .sup-hint { display:none; }
+.sup-card.rev .sup-msg { display:block; }
+
+/* ════════════════════════════
+   OPEN WHEN
+════════════════════════════ */
+.ow-section { padding:6rem 2rem; max-width:1000px; margin:0 auto; }
+.ow-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:1.2rem; margin-top:3rem; }
+.env {
+  background:linear-gradient(135deg,#fdf6ee,#faeee0);
+  border-radius:12px; padding:1.8rem; cursor:pointer;
+  transform:rotate(var(--r,0deg)); transition:all 0.3s;
+}
+.env:hover { transform:rotate(0deg) translateY(-5px) scale(1.02); box-shadow:0 10px 30px rgba(0,0,0,0.1); }
+.env.open { background:linear-gradient(135deg,#fffaf4,#fdf6ee); }
+.env-icon { font-size:1.8rem; display:block; margin-bottom:0.8rem; }
+.env-label { font-family:'Great Vibes',cursive; font-size:1.3rem; color:#7a4040; margin-bottom:0.4rem; }
+.env-peek { font-size:0.75rem; color:#a07060; }
+.env-body { display:none; font-family:'Playfair Display',serif; font-size:0.9rem; color:#4a2818; line-height:1.7; margin-top:0.8rem; font-style:italic; }
+.env.open .env-peek { display:none; }
+.env.open .env-body { display:block; }
+
+/* ════════════════════════════
+   MOON
+════════════════════════════ */
+.moon-section { padding:6rem 2rem; max-width:900px; margin:0 auto; text-align:center; }
+.moon-grid { display:flex; justify-content:center; flex-wrap:wrap; gap:2rem; margin-top:3rem; }
+.moon-card {
+  background:white; border:1px solid rgba(199,80,112,0.12);
+  border-radius:20px; padding:2.5rem 2rem; text-align:center; min-width:200px;
+  transition:transform 0.3s;
+}
+.moon-card:hover { transform:translateY(-5px); box-shadow:0 12px 32px rgba(199,80,112,0.12); }
+.moon-em { font-size:4rem; display:block; margin-bottom:1rem; }
+.moon-dt { font-size:0.6rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--gold); margin-bottom:0.5rem; }
+.moon-ph { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--ink); }
+.moon-mn { font-size:0.78rem; color:var(--muted); margin-top:0.4rem; }
+
+/* ════════════════════════════
+   DESTINATIONS
+════════════════════════════ */
+.dest-section { padding:6rem 2rem; max-width:1000px; margin:0 auto; }
+.dest-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:1.5rem; margin-top:3rem; }
+.dest-card {
+  border-radius:20px; overflow:hidden; background:white;
+  border:1px solid rgba(199,80,112,0.1);
+  transition:transform 0.4s, box-shadow 0.4s;
+}
+.dest-card:hover { transform:translateY(-6px); box-shadow:0 16px 40px rgba(199,80,112,0.18); }
+.dest-vis {
+  height:160px;
+  background:linear-gradient(135deg,var(--blush),var(--blush2));
+  display:flex; align-items:center; justify-content:center; font-size:5rem;
+  position:relative;
+}
+.dest-vis::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,transparent 50%,rgba(255,240,245,0.5)); }
+.dest-info { padding:1.5rem; }
+.dest-name { font-family:'Playfair Display',serif; font-size:1.3rem; color:var(--ink); margin-bottom:0.4rem; }
+.dest-note { font-size:0.78rem; color:var(--muted); line-height:1.6; }
+
+/* ════════════════════════════
+   ACHIEVEMENTS
+════════════════════════════ */
+.ach-section { padding:6rem 2rem; max-width:1000px; margin:0 auto; }
+.ach-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:1.2rem; margin-top:3rem; }
+.badge {
+  background:white; border:1px solid rgba(199,80,112,0.12);
+  border-radius:18px; padding:1.8rem; text-align:center;
+  transition:all 0.3s; position:relative;
+}
+.badge.locked { opacity:0.35; filter:grayscale(1); }
+.badge:not(.locked):hover { transform:translateY(-5px); box-shadow:0 10px 30px rgba(199,80,112,0.15); border-color:var(--gold); }
+.badge-ic { font-size:2.2rem; margin-bottom:0.8rem; }
+.badge-nm { font-family:'Playfair Display',serif; font-size:0.95rem; color:var(--ink); margin-bottom:0.3rem; }
+.badge-ds { font-size:0.7rem; color:var(--muted); }
+.badge-ul { position:absolute; top:10px; right:10px; font-size:0.55rem; background:rgba(201,169,110,0.15); color:var(--gold); padding:2px 7px; border-radius:20px; border:1px solid rgba(201,169,110,0.3); text-transform:uppercase; letter-spacing:0.1em; }
+
+/* ════════════════════════════
+   SCRAPBOOK
+════════════════════════════ */
+.scrap-section { padding:6rem 2rem; max-width:1000px; margin:0 auto; }
+.scrap-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:2rem; margin-top:3rem; }
+.polaroid {
+  background:white; padding:0.9rem 0.9rem 2.8rem;
+  box-shadow:0 8px 28px rgba(0,0,0,0.12);
+  transform:rotate(var(--r,0deg)); transition:transform 0.3s, box-shadow 0.3s;
+  cursor:pointer;
+}
+.polaroid:hover { transform:rotate(0deg) scale(1.05) translateY(-5px); box-shadow:0 16px 40px rgba(0,0,0,0.18); }
+.pol-img { width:100%; aspect-ratio:1; background:linear-gradient(135deg,var(--blush),var(--blush2)); display:flex; align-items:center; justify-content:center; font-size:3rem; }
+.pol-note { font-family:'Great Vibes',cursive; font-size:1.1rem; color:#5a4040; text-align:center; margin-top:0.6rem; }
+
+/* ════════════════════════════
+   FOOTER
+════════════════════════════ */
+footer {
+  text-align:center; padding:5rem 2rem;
+  background:linear-gradient(to bottom,transparent,var(--blush));
+  position:relative;
+}
+.footer-names {
+  font-family:'Great Vibes',cursive;
+  font-size:3.5rem; color:var(--rose);
+  animation:heartbeat 2s infinite;
+  display:block; margin-bottom:1rem;
+}
+.footer-line { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--muted); }
+.footer-small { margin-top:0.8rem; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(58,24,37,0.25); }
+
+/* ════════════════════════════
+   SHARED
+════════════════════════════ */
+.reveal { opacity:0; transform:translateY(36px); transition:opacity 0.8s ease, transform 0.8s ease; }
+.reveal.vis { opacity:1; transform:translateY(0); }
+
+@keyframes fadeUp { from{opacity:0;transform:translateY(28px)} to{opacity:1;transform:translateY(0)} }
+@keyframes heartbeat { 0%,100%{transform:scale(1)} 14%{transform:scale(1.25)} 28%{transform:scale(1)} 42%{transform:scale(1.15)} 56%{transform:scale(1)} }
+
+::-webkit-scrollbar { width:5px; }
+::-webkit-scrollbar-track { background:var(--petal); }
+::-webkit-scrollbar-thumb { background:rgba(199,80,112,0.3); border-radius:3px; }
+
+/* ════════════════════════════
+   CURSOR TRAIL
+════════════════════════════ */
+.cursor-dot {
+  position:fixed; width:12px; height:12px; pointer-events:none;
+  z-index:99999; transform:translate(-50%,-50%);
+  transition:width 0.2s, height 0.2s;
+}
+.cursor-dot::before {
+  content:''; position:absolute; inset:0; border-radius:50%;
+  background:radial-gradient(circle, rgba(199,80,112,0.9), rgba(183,110,121,0.4));
+  animation:cursorPulse 1.5s ease-in-out infinite;
+}
+@keyframes cursorPulse { 0%,100%{transform:scale(1);opacity:0.9} 50%{transform:scale(1.4);opacity:0.6} }
+.heart-trail {
+  position:fixed; pointer-events:none; z-index:99998;
+  font-size:14px; transform:translate(-50%,-50%);
+  animation:heartTrailFade 0.8s ease-out forwards;
+}
+@keyframes heartTrailFade {
+  0% { opacity:1; transform:translate(-50%,-50%) scale(1); }
+  100% { opacity:0; transform:translate(-50%,-120%) scale(0.3); }
+}
+
+/* ════════════════════════════
+   FLOATING SPARKLES / STARS BG
+════════════════════════════ */
+.stars-bg { position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden; }
+.star-twinkle {
+  position:absolute; border-radius:50%;
+  background:rgba(183,110,121,0.6);
+  animation:twinkle var(--td,3s) var(--tdelay,0s) ease-in-out infinite;
+}
+@keyframes twinkle {
+  0%,100%{opacity:0;transform:scale(0.3)}
+  50%{opacity:1;transform:scale(1)}
+}
+.sparkle-float {
+  position:fixed; pointer-events:none; z-index:2;
+  font-size:var(--sf,14px);
+  animation:sparkleFloat var(--sd,6s) var(--sdelay,0s) ease-in-out infinite;
+  opacity:0;
+}
+@keyframes sparkleFloat {
+  0%,100%{opacity:0;transform:translateY(0) rotate(0deg) scale(0.5)}
+  20%,80%{opacity:0.8}
+  50%{opacity:1;transform:translateY(-40px) rotate(180deg) scale(1)}
+}
+
+/* ════════════════════════════
+   INTRO SPARKLE BURST
+════════════════════════════ */
+.intro-burst { position:fixed; inset:0; pointer-events:none; z-index:9999; }
+.burst-particle {
+  position:absolute; top:50%; left:50%;
+  font-size:clamp(12px,2vw,20px);
+  animation:burstOut 2.5s ease-out forwards;
+}
+@keyframes burstOut {
+  0%{opacity:1;transform:translate(-50%,-50%) scale(0)}
+  30%{opacity:1;transform:translate(calc(-50% + var(--bx)),calc(-50% + var(--by))) scale(1.2)}
+  100%{opacity:0;transform:translate(calc(-50% + var(--bx2)),calc(-50% + var(--by2))) scale(0.3)}
+}
+
+/* ════════════════════════════
+   GLASSMORPHISM CARD UPGRADE
+════════════════════════════ */
+.g-card {
+  border-radius:20px; overflow:hidden;
+  background: rgba(255,255,255,0.55) !important;
+  backdrop-filter: blur(8px) saturate(1.4);
+  -webkit-backdrop-filter: blur(8px) saturate(1.4);
+  box-shadow:
+    0 4px 24px rgba(199,80,112,0.1),
+    0 1px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(183,110,121,0.1) inset !important;
+  border: 1px solid rgba(255,255,255,0.7) !important;
+  transition:transform 0.4s ease, box-shadow 0.4s ease;
+  cursor:pointer;
+}
+.g-card:hover {
+  transform:translateY(-10px) rotate(-0.5deg);
+  box-shadow:
+    0 20px 60px rgba(199,80,112,0.2),
+    0 1px 0 rgba(255,255,255,0.9) inset !important;
+}
+
+/* ════════════════════════════
+   PHOTO SOFT GLOW EFFECT
+════════════════════════════ */
+.g-img img {
+  width:100%; height:auto; display:block;
+  filter: brightness(1.03) contrast(0.97) saturate(1.1);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.g-card:hover .g-img img {
+  filter: brightness(1.06) contrast(0.95) saturate(1.2) drop-shadow(0 0 12px rgba(199,80,112,0.3));
+  transform: scale(1.02);
+}
+/* Glow overlay on images */
+.g-img { position:relative; overflow:hidden; }
+.g-img::after {
+  content:'';
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(232,135,154,0.08) 100%);
+  pointer-events:none;
+  transition:opacity 0.4s;
+  opacity:0;
+}
+.g-card:hover .g-img::after { opacity:1; }
+
+/* ════════════════════════════
+   GLASS CARDS (general upgrade)
+════════════════════════════ */
+.c-box {
+  background: rgba(255,255,255,0.5) !important;
+  border: 1px solid rgba(255,255,255,0.7) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  box-shadow: 0 4px 20px rgba(199,80,112,0.1), 0 1px 0 rgba(255,255,255,0.8) inset !important;
+}
+.reason-card, .moon-card, .dest-card, .badge, .s-card, .spotify-wrap, .compat-box, .sup-card, .polaroid {
+  background: rgba(255,255,255,0.65) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  border: 1px solid rgba(255,255,255,0.6) !important;
+}
+
+/* Rose gold accents on borders */
+.section-title em { color: var(--rosegold); }
+.tag { border-color: rgba(183,110,121,0.3) !important; color: var(--rosegold) !important; background: rgba(183,110,121,0.08) !important; }
+.tl-dot { background: linear-gradient(135deg, var(--rosegold), var(--rose)); }
+.tl-date { color: var(--rosegold); }
+.divider { background: linear-gradient(to right, transparent, rgba(183,110,121,0.25), transparent); }
+
+/* ════════════════════════════
+   MOON GLOW SECTION
+════════════════════════════ */
+.moon-section {
+  padding:6rem 2rem; max-width:900px; margin:0 auto; text-align:center;
+  position:relative;
+}
+.moon-section::before {
+  content:'🌙';
+  position:absolute; top:2rem; left:50%; transform:translateX(-50%);
+  font-size:4rem;
+  filter: drop-shadow(0 0 20px rgba(255,230,200,0.8)) drop-shadow(0 0 40px rgba(255,200,150,0.4));
+  animation: moonGlow 3s ease-in-out infinite;
+}
+@keyframes moonGlow {
+  0%,100% { filter:drop-shadow(0 0 20px rgba(255,230,200,0.8)) drop-shadow(0 0 40px rgba(255,200,150,0.4)); }
+  50% { filter:drop-shadow(0 0 35px rgba(255,230,200,1)) drop-shadow(0 0 70px rgba(255,200,150,0.7)) drop-shadow(0 0 100px rgba(255,220,180,0.3)); }
+}
+.moon-section .moon-grid { margin-top:5rem; }
+
+.moon-card {
+  position:relative; overflow:hidden;
+}
+.moon-card::before {
+  content:'';
+  position:absolute; inset:0;
+  background: radial-gradient(ellipse at top, rgba(249,240,255,0.6), transparent 70%);
+  pointer-events:none;
+}
+
+/* ════════════════════════════
+   ENVELOPE / LETTER ANIMATION
+════════════════════════════ */
+.letter-envelope-wrap {
+  max-width:680px; margin:3rem auto 0; position:relative;
+  perspective: 1000px;
+}
+.envelope-outer {
+  position:relative; cursor:pointer;
+  transform-style:preserve-3d;
+}
+.envelope-body {
+  background: linear-gradient(135deg, #faeee0, #fdf6ee);
+  border-radius:4px 4px 0 0;
+  padding:0; overflow:hidden;
+  position:relative; z-index:1;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+  border: 1px solid rgba(199,80,112,0.15);
+}
+.envelope-flap {
+  position:absolute; top:0; left:0; right:0;
+  height:60px; z-index:3; cursor:pointer;
+  background: linear-gradient(135deg, #f0ddd0, #f8ede0);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  transform-origin: top center;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.envelope-flap::after {
+  content:'💌'; position:absolute; top:8px; left:50%; transform:translateX(-50%);
+  font-size:1.4rem; transition:opacity 0.3s;
+}
+.envelope-outer.opened .envelope-flap {
+  transform: rotateX(-180deg);
+}
+.letter-inside {
+  max-height:0; overflow:hidden;
+  transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.envelope-outer.opened .letter-inside {
+  max-height:3000px;
+}
+.open-envelope-hint {
+  text-align:center; padding:2rem;
+  font-family:'Playfair Display',serif; font-style:italic;
+  color:var(--muted); font-size:0.9rem;
+  cursor:pointer; transition:opacity 0.3s;
+}
+.envelope-outer.opened .open-envelope-hint { opacity:0; height:0; padding:0; overflow:hidden; }
+
+/* ════════════════════════════
+   TWINKLING HEARTS FOOTER
+════════════════════════════ */
+footer { position:relative; overflow:hidden; }
+.footer-twinkle {
+  position:absolute; pointer-events:none;
+  font-size:var(--fs,14px);
+  animation:footerTwinkle var(--ft,2s) var(--fd,0s) ease-in-out infinite;
+  opacity:0;
+}
+@keyframes footerTwinkle {
+  0%,100%{opacity:0;transform:translateY(0) scale(0.5)}
+  50%{opacity:1;transform:translateY(-15px) scale(1)}
+}
+.footer-made {
+  margin-top:1.2rem;
+  font-size:0.8rem;
+  color:var(--rosegold);
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  letter-spacing:0.05em;
+}
+.footer-heart-icon {
+  display:inline-block;
+  animation:heartbeat 2s ease-in-out infinite;
+  color:var(--rose);
+}
+
+/* ════════════════════════════
+   ROSE GOLD BUTTON UPGRADES
+════════════════════════════ */
+.spin-btn, .calc-btn {
+  background: linear-gradient(135deg, var(--rosegold), #a03050, var(--rosegold2)) !important;
+  background-size: 200% 200% !important;
+  animation: roseGoldShimmer 3s ease infinite !important;
+}
+@keyframes roseGoldShimmer {
+  0%,100%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+}
+
+/* ════════════════════════════
+   HERO SPARKLE OVERLAY
+════════════════════════════ */
+.hero-sparkles { position:absolute; inset:0; pointer-events:none; z-index:1; }
+.hero-sp {
+  position:absolute;
+  font-size:var(--hs,16px);
+  opacity:0;
+  animation:heroSparkle var(--hd,4s) var(--hdl,0s) ease-in-out infinite;
+}
+@keyframes heroSparkle {
+  0%,100%{opacity:0;transform:scale(0.3) rotate(0deg)}
+  40%,60%{opacity:0.9;transform:scale(1) rotate(180deg)}
+}
+
+/* ════════════════════════════
+   SECTION BG MOONLIGHT TINT
+════════════════════════════ */
+.reasons-section, .ach-section {
+  background: radial-gradient(ellipse at center top, rgba(249,240,255,0.4), transparent 70%);
+}
+.playlist-section, .compat-section {
+  background: radial-gradient(ellipse at center, rgba(255,240,248,0.5), transparent 70%);
+}
+
+/* ════════════════════════════
+   VIDEO CARDS GLASS
+════════════════════════════ */
+section > div > div[style*="background:white"] {
+  backdrop-filter: blur(10px);
+}
+
+@media(max-width:600px){
+  .gallery-section,.reasons-section,.timeline-section,.playlist-section,.wheel-section,.scratch-section,.compat-section,.surprises-section,.ow-section,.moon-section,.dest-section,.ach-section,.scrap-section { padding:4rem 1.2rem; }
+  .letter-paper { padding:2rem 1.5rem; }
+  .s-mem { display:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- PETALS -->
+<div class="petals" id="petals"></div>
+
+<!-- STARS BACKGROUND -->
+<div class="stars-bg" id="starsBg"></div>
+
+<!-- INTRO SPARKLE BURST -->
+<div class="intro-burst" id="introBurst"></div>
+
+<!-- CURSOR DOT -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-circle"><div class="hero-dot"></div></div>
+  <div class="hero-sparkles" id="heroSparkles"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">✦ a love story ✦</div>
+    <h1 class="hero-names">
+      Miss Noor Fatima Jii <span class="amp">♥</span>
+    </h1>
+    <p class="hero-sub">"✨ From our first hello to my favorite forever story"</p>
+    <div class="hero-counter">
+      <div class="c-box"><span class="c-num" id="cDays">—</span><span class="c-lbl">Days</span></div>
+      <div class="c-box"><span class="c-num" id="cHours">—</span><span class="c-lbl">Hours</span></div>
+      <div class="c-box"><span class="c-num" id="cMins">—</span><span class="c-lbl">Minutes</span></div>
+      <div class="c-box"><span class="c-num" id="cSecs">—</span><span class="c-lbl">Seconds</span></div>
+    </div>
+  </div>
+  <div class="scroll-cue"><span>Scroll</span><div class="scroll-line"></div></div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ═══ GALLERY ═══ -->
+<section class="gallery-section reveal">
+  <div class="tag">📸 Our Moments</div>
+  <h2 class="section-title">A gallery of <em>yours</em></h2>
+  <div class="gallery-grid">
+<div class="g-card">
+  <div class="g-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/1700c688-5737-4a38-8433-b03fefe5c14e.jpg" alt="Our Photo">
+  </div>
+  <div class="g-caption">
+    <h4>The first photo you sent 📸🥹🤍 wasn't just a picture to me—it was the beginning of something special ✨💗. I remember looking at it again and again 😭🌷, smiling for no reason 😊🤍. Little did I know that the girl in that photo would become one of the most important people in my life 🥹❤️✨.</h4><p>When everything quietly shifted 🌙🤍✨🥹</p>
+  </div>
+</div>
+    <div class="g-card">
+  <div class="g-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/3103db17-3836-43ea-86cf-0c768382f929.jpg" alt="Our Photo">
+  </div>
+  <div class="g-caption"> 
+   <h4>The first time you tried this hairstyle 💇‍♀️🥹🤍, I couldn’t stop looking at you 😭💗✨. It wasn’t just the look 🌷 it was your smile 😊🤍, confidence 👑✨, and effortless vibe 🫶🏻💗.What melted me wasn’t just beauty 🌸💖, but the effort behind it 🥹🤍 trying something new and sharing it with me 💗🌷.</h4><p>That’s what I love about you 🫶🏻🥹💖.</p>
+     </div> 
+</div>
+    <div class="g-card">
+  <div class="g-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/e2d2b6e1-13a3-449c-be7f-44cbf89a0237.jpg" alt="Our Photo">
+  </div>
+  <div class="g-caption">
+    <h4>For over two months ⏳🥹🤍, all I could do was wait. I missed our conversations 💬💗, your presence 🌷✨, and the little moments that had become such an important part of my day 🌸🤍.  Then one day, my phone lit up 📱✨ with a message from you 💗🥹.
+And with it came a photo 📸🤍.
+
+To anyone else, it might have been just another picture 🌙📷. But to me, it was the end of a long wait ⏳💗. The moment I saw it, I couldn't stop smiling 😊🥹✨. It felt like a piece of my happiness had found its way back to me 🤍🌷💗.
+
+What I remember most isn't how beautiful the photo was 📸✨ though it truly was beautiful 🌸💗. What I remember is the feeling it gave me 🥹🤍. Relief 🌿✨. Excitement 💗🌷. Happiness 😊🤍. The feeling of finally seeing someone I had missed every single day 🫶🏻🥹💖.</h4>
+
+<p>That photo will always be special to me 📸🤍, not because it was perfect ✨, but because it came from you 💗🥹 at a moment when I needed it the most ❤️🌷✨.</p>
+  </div>
+</div>
+    <div class="g-card">
+  <div class="g-img" style="aspect-ratio: 9/16; background: #000; overflow: hidden; position: relative;">
+    <iframe
+      src="https://streamable.com/e/yysmkr"
+      frameborder="0"
+      allowfullscreen
+      loading="lazy"
+      allow="autoplay"
+      loading="lazy"
+      style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; border: none;">
+    </iframe>
+  </div>
+  <div class="g-caption">
+  <h4>I'll never forget that video 🎥🥹🤍  
+What made it special wasn't just the cute gesture 😭💗✨, it was the feeling behind it 🌷🤍. It was one of those unexpected moments that instantly put a smile on my face 😊💗 and stayed in my heart long after 🥹✨.  In that moment, I felt cared for in a way that words can't fully explain 🫶🏻🤍💗. It wasn't about the video itself 🎥🌸; it was about knowing that I mattered to you 🥹💗 and that you weren't afraid to show it ✨🤍.
+
+Even now, when I think about that video 🎥🥹, I don't just remember what happened 💭🌷. I remember the happiness it brought me 😊💗, the way my heart skipped a beat 💓✨, and how lucky I felt to have someone so special in my life 🥹🤍🌸.</h4>
+
+<p>Some memories fade with time 🌙✨, but this is one of those moments I'll always carry with me 🥹💗🤍. ❤️✨</p>   </div>
+</div>
+  <div class="g-card">
+  <div class="g-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/310509dc-e199-4deb-96a0-7c2c45134ae5.jpg" alt="Our Photo">
+  </div>
+  <div class="g-caption">
+    <h4>When you sent me this photo 📸🥹🤍, I genuinely had to stare at it for a few seconds. 😭✨  
+Not because it was just a beautiful picture, but because it completely caught me off guard. 💗🌷  
+I don't know how you do it 🫠🤍, but every once in a while you send a photo that leaves me speechless 😭✨, and this was definitely one of them. 📸💗  
+The way your hair fell naturally 🌸, the simplicity of the moment 🥹🤍, aur woh effortless sa look—it all came together perfectly. ✨💗  
+The moment I saw it, I literally got goosebumps. 😭🤌🏻❄️  
+For a few seconds, mera dimaag sach mein kaam karna band kar gaya. 🥹💗✨  
+I just kept looking at the photo 📸🤍 and thinking,  
+"How can someone look this beautiful without even trying?" 😭🌷💗  
+And the funny thing is, it wasn't just about how you looked. 🫶🏻✨  
+It was the feeling the photo gave me 🥹🤍  
+That sudden smile 😊💗  
+That racing heart ❤️‍🔥✨  
+That moment when everything else disappears for a second 🌍💭 and all I can think about is you. 🥹🌷💗</h4><p>Kabhi kabhi lagta hai ki main aapki photos dekhne ki aadat daal chuka hoon 📸🥹🤍  Phir aap ek aisi photo bhej deti ho jo mujhe phir se surprise kar deti hai 😭💗✨❤️
+
+Some photos are beautiful 📸🌷
+
+Some photos become memories 🥹🤍✨
+
+Aur yeh un photos mein se ek hai jo shayad main kabhi nahi bhoolunga. ❤️✨🌸</p>
+  </div>
+</div>
+
+<script>
+function playVid() {
+  const v = document.getElementById('mainVid');
+  const o = document.getElementById('vidOverlay');
+  v.play();
+  o.style.display = 'none';
+}
+
+
+</script>
+    <div class="g-card">
+  <div class="g-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/dc006059-0b35-4990-bac8-e12071664b6e.jpg" alt="Our Photo">
+  </div>
+  <div class="g-caption">
+    <h4>After days of misunderstandings, silence, and distance 😭🌧️💔, we finally cleared everything. 🥹🤍✨ It felt like all the confusion that had built up between us slowly started fading away. 🌷💫
+
+Later, when I asked for your photo 📸💗, I didn’t expect what came next. 😭🎀 Instead of just sending it, you gave me a task—study 8 hours daily for 3 days. 📚⏳✨
+
+At first, it surprised me. 🥹🤍 But soon I understood what it really meant. 💫 It wasn’t a restriction, it was care in its purest form. 🌷💗 You weren’t just trying to be sweet—you were pushing me toward my goals 🎓✨, reminding me that my future matters as much as my feelings. 🤍📚🌸
+
+And when you finally sent the pictures after those days 📸🥹💗, it hit me differently. ✨ I didn’t just see you in those photos—I saw your belief in me 🤍🌷, your concern for my discipline 📚💫, and the way you choose to care through actions, not just words. 🫶🏻🥹✨</h4>
+<p>That moment made me realize something important: real care doesn’t always feel soft. 🤍🌸 Sometimes it feels like someone holding you accountable because they want to see you succeed. ❤️🥹🌷✨</p>
+  </div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ LOVE LETTER ═══ -->
+<section class="letter-section reveal">
+  <div style="max-width:680px;margin:0 auto">
+    <div class="tag">💌 From the heart</div>
+    <h2 class="section-title">A letter, <em>just for you</em></h2>
+  </div>
+  <div class="letter-envelope-wrap">
+    <div class="envelope-outer" id="envelopeOuter">
+      <div class="envelope-flap" id="envelopeFlap"></div>
+      <div class="open-envelope-hint" id="envelopeHint">✦ Tap to open your letter 💌 ✦</div>
+      <div class="letter-inside" id="letterInside">
+        <div class="envelope-body">
+<div class="letter-wrap">
+    <div class="letter-shadow"></div>
+    <div class="letter-paper">
+      <div class="letter-date">June 2026</div>
+      <div class="letter-body">
+        Dear Duguuuu 😭🌷💗,<br><br>
+
+I don’t even know where to start, because everything I feel for you is more than what words can hold. 🥹🤍✨ <br><br>
+
+We’ve had our moments misunderstandings, silence, distance, and times when things didn’t feel right between us. 😭🌧️💔 But even in those phases, one thing never changed you still mattered to me 🌷🤍, aur kahin na kahin I know I still mattered to you too. 🥹💗✨ <br><br>
+
+What makes this bond different for me is not the perfect days, but how we find our way back after the imperfect ones. 🫶🏻🌸🤍 When we finally met after everything, it felt like something inside me settled. 🥹✨ Jaise saari confusion dheere dheere gayab ho gayi ho. 🌷💫🤍 <br><br>
+
+And then came those small moments that mean the most. 💗🎀 I expected something simple, but you gave me something real. 🥹🤍✨ You gave me direction instead of distraction. 📚🌷 You told me to focus on my studies, apne goals ko time dene ke liye, to become better. 🎓💫🤍 At first, I didn’t fully understand it, but later I did. 🥹🌸 <br><br>
+
+That wasn’t just love in a soft way. 🤍✨ That was care in its strongest form. 💗🫶🏻 You didn’t just want my attention—you wanted my future to be strong. 🌷📚💫 Aur honestly, that made me respect you even more than before. 🥹👑🤍 <br><br>
+
+I’ve realized something important through all of this real love is not always easy, not always smooth, but it’s always intentional. 🤍🌷✨ Aur jo humare beech hai, with its ups and downs, still feels real to me. 🥹💗🌸 <br><br>
+
+I don’t want a perfect story. 🌷🤍 I just want us to keep understanding each other better every time we fall apart and come back together. 🫶🏻🥹💫 <br><br>
+
+And most of all, I want you to know—no matter what happens, you’ll always be someone I deeply care about. ❤️🥹🌷🤍✨
+      </div>
+      <div class="letter-sig">Always yours, Adii ♥</div>
+    </div>
+  </div>
+      </div>
+      </div>
+    </div>
+  </div></section>
+
+<div class="divider"></div>
+
+<!-- ═══ TIMELINE ═══ -->
+<section class="timeline-section reveal">
+  <div class="tag">⏳ Our Journey</div>
+  <h2 class="section-title">How we <em>got here</em></h2>
+  <div class="timeline">
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div></div>
+      <div class="tl-right">
+        <div class="tl-date">October 8, 2024 · 3:32 PM</div>
+        <div class="tl-title">The First Message ✨</div>
+        <div class="tl-desc">3:32 PM — a small moment that quietly changed everything. You replied. And something shifted, forever.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div></div>
+      <div class="tl-right">
+        <div class="tl-date">October 24, 2024 • 7:32 AM </div>
+        <div class="tl-title">First Call 📞</div>
+        <div class="tl-desc">Our first call lasted only four minutes, but somehow those four minutes became one of my favorite memories. 🥹❤️📞✨ <br><br>
+
+We had barely started talking when your father's call came 📱🤍, and our conversation ended sooner than either of us wanted. 😭🌷 It wasn't a long call, and we didn't get enough time to say everything we wanted to. 🫶🏻💗 <br><br>
+
+But looking back, I don't remember how short it was. 🥹✨ I remember how excited I was to hear your voice for the first time 🎧🤍, how nervous I felt 😭🎀, and how happy those few minutes made me. 💕🌸 <br><br>
+
+Sometimes, the shortest moments leave the biggest memories. 🥹❤️📞✨🌷 <br><br></div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div></div>
+      <div class="tl-right">
+        <div class="tl-date">December 21 2024 • 11:53 </div>
+        <div class="tl-title">Official ❤️</div>
+        <div class="tl-desc">## The Day You Proposed ❤️<br><br>
+
+This is one of those memories that always makes me smile whenever I think about it.<br><br>
+
+That day, I was studying. I had told you that I was going offline to focus on my studies. But because of the power cuts, I kept coming back online again and again. First I went to study, then the electricity went out. I came back online. Then the power returned, so I went back to studying. A little later the same thing happened again. It felt like the entire evening was playing a game with me.<br><br>
+
+Around 9:55 PM, while I was having dinner, you sent:<br><br>
+
+"Achaa suno ek baat bolna hai 🤡"<br><br>
+
+At that moment, I had no idea what was coming.<br><br>
+
+Since I was busy studying, I replied late. When I finally came back around 11:04 PM, I thought you were simply going to tell me whatever was on your mind.<br><br>
+
+Instead, you started with:<br><br>
+
+"Ghar hamara uss side hai"<br><br>
+
+Me:<br>
+"Kya? 🤡"<br><br>
+
+You:<br>
+"Bich ma parta hai rode 🤡"<br><br>
+
+Me:<br>
+"Mujhe kuch samjh nhi aaraha hai kya bol rahe ho"<br><br>
+
+You:<br>
+"Aab rode ka uss par hai dukan 🥸"<br><br>
+
+"Aab dukan Jana ka liya rode cross ❌ karna paraga 😌"<br><br>
+
+Me:<br>
+"Haa wo to karna padega 😶"<br><br>
+
+You:<br>
+"To aab rode kaisa cross ❌ kara 🤷🏻"<br><br>
+
+Me:<br>
+"Ithar udhar dekh lata tha 🤧"<br><br>
+
+You:<br>
+"Good good 😹"<br><br>
+
+"Kio ager gari ghoda nahi aa raha hai 😹"<br><br>
+
+"Ek daam aakh mund liya 💀"<br><br>
+
+At this point I was completely confused, but I kept following along because I wanted to know where this story was going. 😭<br><br>
+
+Then you said:<br><br>
+
+"Or dur la gye"<br><br>
+
+"Waha per ham kya karta tha"<br><br>
+
+Me:<br>
+"Wo to hai"<br><br>
+
+You:<br>
+"Kismat ka bharose jata tha 🙂"<br><br>
+
+Me:<br>
+"Aur aur"<br><br>
+
+You:<br>
+"Khatam 😁"<br><br>
+
+Me:<br>
+"Ek aur"<br><br>
+
+And then suddenly the conversation took a completely random turn.<br><br>
+
+You:<br>
+"Heyy"<br><br>
+
+"Are you breathing"<br><br>
+
+"Tell me yes or no 😭"<br><br>
+
+Me:<br>
+"No"<br><br>
+
+Your reaction:<br>
+"✌🏻✌🏻💀💀"<br><br>
+
+You:<br>
+"Are you gay"<br><br>
+
+Me:<br>
+"No"<br><br>
+
+You:<br>
+"I mean guy"<br><br>
+
+Me:<br>
+"Yes"<br><br>
+
+You:<br>
+"Do you think I am funny 🤣"<br><br>
+
+Me:<br>
+"Yes"<br><br>
+
+You:<br>
+"What brand is your microwave"<br><br>
+
+Me:<br>
+"I don't have any microwave"<br><br>
+
+By this point, I had completely stopped trying to guess what was happening. 😭<br><br>
+
+Then you said:<br><br>
+
+"Last question..."<br><br>
+
+And finally...<br><br>
+
+"Will you be my bf ❤️"<br><br>
+
+For a second, everything clicked.<br><br>
+
+The road.<br>
+The shop.<br>
+The random questions.<br>
+The microwave.<br><br>
+
+All of it had somehow led to this one moment.<br><br>
+
+And my reply was:<br><br>
+
+"Wo to main pahle se hi hu. ❤️"<br><br>
+
+Looking back, what I love most isn't just the question itself. It's the way you asked it. You could have asked directly, but instead you turned it into the funniest, most confusing, most unforgettable conversation ever.<br><br>
+
+And honestly, that's exactly why I love this memory so much.<br><br>
+
+It wasn't a perfect proposal.<br><br>
+
+It was your proposal.<br><br>
+
+And that's what made it perfect. ❤️✨.</div>
+      </div>
+    </div>
+    <div class="tl-item">
+      <div class="tl-left"><div class="tl-dot"></div></div>
+      <div class="tl-right">
+        <div class="tl-date">March 30 · Every Year 🎂</div>
+        <div class="tl-title"> Your Birthday</div>
+        <div class="tl-desc">For most people, it's just another date on the calendar. 🗓️✨
+
+But for me, it's the day the world received one of its most beautiful souls. 🥹🤍🌷
+
+It's the day God decided that years later, my life would be blessed with someone who would make me smile on my worst days 😭💗, support me when I needed it most 🤝🏻🤍, and fill ordinary moments with happiness 🌸✨.
+
+That's why your birthday has never felt like just your special day. 🎂🎀💕
+
+It feels like a festival to me. 🎉🌷✨ <br><br>
+
+A day worth celebrating, not only because you were born 🥹👑, but because your existence has made so many lives brighter ☀️🤍 including mine. 💗🌸
+
+Every year, when this day arrives 📅✨, I don't just think about your age increasing. I think about how grateful I am that among billions of people in this world 🌎🤍, our paths crossed. 🫶🏻🥹🌷 <br><br>
+
+Your birthday isn't just the celebration of your life. 🎂💗
+
+It's the celebration of the happiness 😊🌸, memories 📸🤍, laughter 😭🎀, and love 💕✨ that you brought into mine.
+
+And for that, I'll always be thankful. 🥹🤲🤍✨🌷</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ REASONS ═══ -->
+<section class="reasons-section reveal">
+  <div class="tag">❤️ The List</div>
+  <h2 class="section-title">Reasons I <em>love you</em></h2>
+  <div class="reasons-grid">
+    <div class="reason-card"><div class="r-icon">🌙</div><div class="r-text">Your Voice — It doesn't just reach my ears 🥹🎀🤍. It lingers under my skin, haunting every quiet moment 😭🌷✨. There's something cruel about how softly you speak 🌚💗, how your voice can calm my chaos and create it at the same time 🫠🤌💕. One moment it feels like comfort, and the next it leaves me thinking about you for hours 🥹🎧🌸🤍.</div></div>
+    <div class="reason-card"><div class="r-icon">😂</div><div class="r-text">Your heart — One thing I really admire about you is how gentle your heart is 🥹🤍🌷✨. You can be tough with the people you love 😭🎀💗, but you never like being harsh to others 🤍🫶🏻🌸. That's one of the many reasons I admire you so much 🥹👑💫.</div></div>
+    <div class="reason-card"><div class="r-icon">🔥</div><div class="r-text">How passionate you get when you talk about things you love. The way your whole face changes — I could watch it forever.</div></div>
+    <div class="reason-card"><div class="r-icon">👀</div><div class="r-text">Even in pictures, your eyes somehow manage to make me feel close to you </div></div>
+    <div class="reason-card"><div class="r-icon">🌸</div><div class="r-text">Attractive — There’s something effortlessly attractive about you that’s hard to ignore 😭💗✨🌷
+
+You’re genuinely gorgeous in a way that stays on my mind 🥹🤍🎀💫
+
+I think you have something so naturally cute about you, it makes you even more lovable 😭🫶🏻🌸💗</div></div>
+    <div class="reason-card"><div class="r-icon">✨</div><div class="r-text">How you get angry with me, but still somehow make it feel like care at the end 😭💗🌷🎀
+
+The comfort I feel just talking to you 🥹🤍✨
+
+The little habits of yours that make you, you 😭🫶🏻🌸
+
+How special you feel to me, without even trying 💗👑🌷
+
+There are so many things I love about you, but somehow you being you is my favorite 🥹🤍🎀✨</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ PLAYLIST ═══ -->
+<section class="playlist-section reveal">
+  <div class="tag">🎵 Our Soundtrack</div>
+  <h2 class="section-title">Songs that sound <em>like us</em></h2>
+  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:0.5rem;font-style:italic;">Click any song to play ♫</p>
+  <div class="playlist">
+    <div class="s-card" onclick="playSong(0)">
+      <div class="s-art" style="background:linear-gradient(135deg,#f5c0d0,#e8879a)">🎸</div>
+      <div class="s-info"><div class="s-name">Tum Ho</div><div class="s-artist">Mohit Chauhan · Rockstar</div></div>
+      <div class="s-mem">That late night drive</div>
+      <div class="s-btn" id="pb0">▶</div>
+    </div>
+    <div class="s-card" onclick="playSong(1)">
+      <div class="s-art" style="background:linear-gradient(135deg,#d4b0c0,#c07090)">🎹</div>
+      <div class="s-info"><div class="s-name">Perfect</div><div class="s-artist">Ed Sheeran · ÷ (Divide)</div></div>
+      <div class="s-mem">Your birthday, slow dance</div>
+      <div class="s-btn" id="pb1">▶</div>
+    </div>
+    <div class="s-card" onclick="playSong(2)">
+      <div class="s-art" style="background:linear-gradient(135deg,#f0c0a0,#d09060)">🎵</div>
+      <div class="s-info"><div class="s-name">Kesariya</div><div class="s-artist">Arijit Singh · Brahmastra</div></div>
+      <div class="s-mem">You cried. I did too.</div>
+      <div class="s-btn" id="pb2">▶</div>
+    </div>
+    <div class="s-card" onclick="playSong(3)">
+      <div class="s-art" style="background:linear-gradient(135deg,#c0b0e0,#9070c0)">🎶</div>
+      <div class="s-info"><div class="s-name">Die With A Smile</div><div class="s-artist">Bruno Mars & Lady Gaga</div></div>
+      <div class="s-mem">Currently on repeat</div>
+      <div class="s-btn" id="pb3">▶</div>
+    </div>
+  </div>
+  <div class="spotify-wrap">
+    <div class="snp">
+      <span class="snp-label">Now Playing</span>
+      <div class="snp-bars"><span></span><span></span><span></span><span></span></div>
+    </div>
+    <iframe id="spEmbed" style="border-radius:14px;margin-top:0.8rem"
+      src="https://open.spotify.com/embed/track/1eAPZnlyYcGo0KfNFVRgUJ?utm_source=generator&theme=0"
+      width="100%" height="152" frameBorder="0" allowfullscreen=""
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SPIN WHEEL ═══ -->
+<section class="wheel-section reveal">
+  <div class="tag">🎡 Spin & Win</div>
+  <h2 class="section-title">A little <em>gift</em> for you</h2>
+  <p style="font-size:0.82rem;color:var(--muted);margin-top:0.5rem;">Whatever the pointer lands on — that's yours 🌸</p>
+  <div class="wheel-wrap">
+    <div class="wheel-ptr">▼</div>
+    <canvas id="wheelCvs" width="300" height="300"></canvas>
+  </div>
+  <button class="spin-btn" onclick="spinWheel()">Spin the Wheel 🌸</button>
+  <div class="spin-result" id="spinRes"></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SCRATCH CARD ═══ -->
+<!-- ═══ SCRATCH CARD ═══ -->
+<section class="scratch-section reveal">
+
+  <!-- 🛠️ FIXED: Container with standard 9:16 vertical ratio styles -->
+  <div class="scratch-outer" style="position: relative; width: 240px; height: 426px; margin: 3rem auto 0; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 40px rgba(199,80,112,0.2); cursor: crosshair;">
+    
+    <!-- 🌟 FIXED: Added scratch-inner layer with Noor & Adi photo link -->
+    <div class="scratch-inner" style="position: absolute; inset: 0; background: #fff;">
+      <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/8b919a0e-b8da-4ad8-8e59-9760b9803933.jpg" alt="Noor and Adi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    </div>
+    
+    <!-- 🛠️ CRITICAL FIX: Canvas attributes set perfectly to 240x426 for 100% top-to-bottom scratch coverage -->
+    <canvas id="scratchCvs" width="240" height="426" style="position: absolute; inset: 0; border-radius: 20px; touch-action: none; width: 100%; height: 100%; z-index: 2;"></canvas>
+  </div>
+
+  <!-- Real-time percent counter status -->
+  <div id="scratchPct" class="scratch-pct">0% scratched — keep going...</div>
+  <div class="scratch-hint">— written with all the love I have</div>
+  
+  <div class="sc-text" style="margin-top: 1.5rem;">
+    Everytimes when I just stare at your photos and think, 'Ya Allah, koi itna khoobsurat bhi ho sakta hai? 😭💕
+  </div>
+
+</section>
+
+
+<!-- ═══ COMPATIBILITY ═══ -->
+<section class="compat-section reveal">
+  <div class="tag">💯 Calculate Us</div>
+  <h2 class="section-title">Our <em>compatibility</em></h2>
+  <div class="compat-box">
+    <div class="cq">
+      <span class="cq-label">1. When they text first, you feel…</span>
+      <div class="cq-opts">
+        <span class="cq-opt" onclick="pick(this,0,3)">Instant happiness 🥰</span>
+        <span class="cq-opt" onclick="pick(this,0,2)">Happy but chill 😊</span>
+        <span class="cq-opt" onclick="pick(this,0,1)">Normal tbh</span>
+        <span class="cq-opt" onclick="pick(this,0,0)">Depends on mood</span>
+      </div>
+    </div>
+    <div class="cq">
+      <span class="cq-label">2. When they're upset, you…</span>
+      <div class="cq-opts">
+        <span class="cq-opt" onclick="pick(this,1,3)">Drop everything & check on them 💗</span>
+        <span class="cq-opt" onclick="pick(this,1,2)">Give space + sweet message</span>
+        <span class="cq-opt" onclick="pick(this,1,1)">Wait for them to reach out</span>
+        <span class="cq-opt" onclick="pick(this,1,0)">Don't always notice 😅</span>
+      </div>
+    </div>
+    <div class="cq">
+      <span class="cq-label">3. How often do you both laugh together?</span>
+      <div class="cq-opts">
+        <span class="cq-opt" onclick="pick(this,2,3)">Every conversation 😂</span>
+        <span class="cq-opt" onclick="pick(this,2,2)">Most of the time</span>
+        <span class="cq-opt" onclick="pick(this,2,1)">Sometimes</span>
+        <span class="cq-opt" onclick="pick(this,2,0)">Rarely</span>
+      </div>
+    </div>
+    <div class="cq">
+      <span class="cq-label">4. Can you be 100% yourself around them?</span>
+      <div class="cq-opts">
+        <span class="cq-opt" onclick="pick(this,3,3)">Completely ✨</span>
+        <span class="cq-opt" onclick="pick(this,3,2)">Mostly yes</span>
+        <span class="cq-opt" onclick="pick(this,3,1)">Still getting there</span>
+        <span class="cq-opt" onclick="pick(this,3,0)">Not really</span>
+      </div>
+    </div>
+    <div class="cq">
+      <span class="cq-label">5. When you fight, you both…</span>
+      <div class="cq-opts">
+        <span class="cq-opt" onclick="pick(this,4,3)">Talk it out & grow 💪</span>
+        <span class="cq-opt" onclick="pick(this,4,2)">Cool down then resolve</span>
+        <span class="cq-opt" onclick="pick(this,4,1)">One of us gives in</span>
+        <span class="cq-opt" onclick="pick(this,4,0)">Gets messy 😬</span>
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcCompat()">Calculate Our Love 💕</button>
+    <div class="compat-res" id="compatRes">
+      <div class="ring-wrap">
+        <svg width="120" height="120" viewBox="0 0 120 120">
+          <defs>
+            <linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#c75070"/>
+              <stop offset="100%" style="stop-color:#c9a96e"/>
+            </linearGradient>
+          </defs>
+          <circle class="rb" cx="60" cy="60" r="50"/>
+          <circle class="rf" id="ringFill" cx="60" cy="60" r="50"/>
+        </svg>
+        <div class="ring-num" id="ringNum">0%</div>
+      </div>
+      <div class="cv" id="cVerdict"></div>
+      <div class="cd" id="cDesc"></div>
+      <div class="c-bars" id="cBars"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SURPRISES ═══ -->
+<section class="surprises-section reveal">
+  <div class="tag">💭 Tap to Reveal</div>
+  <h2 class="section-title">Hidden <em>surprises</em> for you</h2>
+  <div class="surprises-grid">
+    <div class="sup-card" onclick="this.classList.toggle('rev')"><div class="sup-icon">🔮</div><div class="sup-hint">Tap to reveal...</div><div class="sup-msg">The moment I knew I loved you? A random night when you were just being yourself and I thought, oh. It's you. It's always been you.</div></div>
+    <div class="sup-card" onclick="this.classList.toggle('rev')"><div class="sup-icon">🌟</div><div class="sup-hint">A secret...</div><div class="sup-msg">I screenshot every silly thing you say. Every random joke, every cute message, every little moment that makes me smile. <br><br>
+At this point, I have an entire folder dedicated to you. It's probably much longer than it should be, and honestly, it's a little embarrassing. <br><br>
+But I don't think I'll ever delete it.
+Because those screenshots aren't just messages to me—they're memories. Tiny reminders of the person who somehow manages to make ordinary days feel special. <br><br>
+And years from now, I know I'll still smile while scrolling through them, remembering every conversation that made me laugh, blush, or simply feel lucky to have you in my life. ❤️</div></div>
+    <div class="sup-card" onclick="this.classList.toggle('rev')"><div class="sup-icon">🌹</div><div class="sup-hint">Something true</div><div class="sup-msg">
+
+You care more than you admit.
+<br><br>
+You may get angry, tease me, or pretend not to care sometimes, but when it comes to the people you love, your actions always reveal your heart.
+<br><br>
+You don't just want me to be happy—you want me to become better.
+<br><br>
+You're the kind of person who reminds me to focus on my future, even when it means getting less of my attention in the present.
+<br><br>
+You notice small things.
+
+The things most people forget, you remember.
+<br><br>
+And one thing I know for sure is that you have one of the softest hearts I've ever known.
+<br><br>
+You may not always show it in obvious ways, but your kindness appears in the little things you do, the people you care about, and the way you worry for those you love.
+<br><br>
+You have a beautiful habit of caring through actions rather than words.
+
+That's one of the many reasons you're so special to me. ❤️</div></div>
+    <div class="sup-card" onclick="this.classList.toggle('rev')"><div class="sup-icon">💫</div><div class="sup-hint">A confession</div><div class="sup-msg">I still get butterflies before calling you.
+
+Every. Single. Time.
+<br><br>
+No matter how many times we've talked, no matter how much time passes, that feeling never goes away.
+<br><br>
+I know you're mine, and yet somehow I still have the biggest crush on you. 😭❤️
+<br><br>
+The moment I see your call, my heart starts racing. And when I finally hear your voice, I don't even know what happens to me. It's like my whole body forgets how to act normal for a second.
+<br><br>
+Suddenly, I'm smiling for no reason. My heart beats faster. I get that weird full-body feeling that I can't really explain.
+
+It's funny, because after all this time, you still have the same effect on me.
+<br><br>
+You'd think I'd be used to your voice by now.
+
+But somehow, every call still feels special.
+<br><br>
+And honestly?
+
+I hope that feeling never goes away. ❤️✨</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ OPEN WHEN ═══ -->
+<section class="ow-section reveal">
+  <div class="tag">📖 Letters</div>
+  <h2 class="section-title">Open when <em>you need it</em></h2>
+  <div class="ow-grid">
+    <div class="env" style="--r:-2deg" onclick="this.classList.toggle('open')">
+      <span class="env-icon">💌</span>
+      <div class="env-label">Open when you miss me</div>
+      <div class="env-peek">Tap to open...</div>
+      <div class="env-body">When You Miss Me ❤️
+
+Whenever you miss me, I hope you remember that there's someone out there thinking about you too.
+<br><br>
+Someone who smiles at old chats, rereads messages, looks at photos, and randomly remembers little moments that probably seem insignificant to everyone else.
+<br><br>
+Distance, busy days, and silence may come and go, but they never change how much you mean to me.
+<br><br>
+So whenever you miss me, don't just think about the moments we've already shared.
+
+Think about all the memories we still have left to make.
+<br><br>
+And until we talk again, just know that a part of me is always with you, cheering for you, caring about you, and waiting to hear about your day. ❤️</div>
+    </div>
+    <div class="env" style="--r:1.5deg" onclick="this.classList.toggle('open')">
+      <span class="env-icon">😢</span>
+      <div class="env-label">Open when you're sad</div>
+      <div class="env-peek">Tap to open...</div>
+      <div class="env-body">Mera pyaraaa bachaaaa, 🌷
+<br><br>
+I know there are days when things feel heavier than usual, and I know you don't always say everything that's on your mind.
+<br><br>
+But I hope you remember that it's okay to have bad days. It's okay to be tired. It's okay to feel sad sometimes. You don't always have to be strong.
+<br><br>
+And on those days, I just want you to be a little gentler with yourself. The same kindness you give to everyone else—you deserve that too.
+<br><br>
+You don't have to earn care, comfort, or love by being happy all the time. Even on your worst days, you're still the same wonderful person I admire so much.<br><br>
+
+So whenever life feels overwhelming, take your time. Rest if you need to. Cry if you need to. And please don't forget that there are people who care about you and want to see you smile again.<br><br>
+
+For now, just know this: you're important, you're appreciated, and you're loved more than you realize. 🫶🏻</div>
+    </div>
+    <div class="env" style="--r:-1deg" onclick="this.classList.toggle('open')">
+      <span class="env-icon">🎉</span>
+      <div class="env-label">Open when you're happy</div>
+      <div class="env-peek">Tap to open...</div>
+      <div class="env-body">Mera pyaraaa duguuu, 😁✌🏻
+<br><br>
+One of my favorite things in the world is seeing you happy.
+<br><br>
+Sach bataun, jab aap khush hote ho na, to pata nahi kyu mera mood bhi automatically achha ho jata hai. Your smile has a way of making everything feel brighter.
+<br><br>
+I love seeing you laugh, seeing you tease me, and seeing that playful side of yours. Those little moments may seem normal, but they mean a lot to me.
+<br><br>
+Kabhi kabhi lagta hai ki aapko khud bhi nahi pata ki aapki happiness kitni contagious hai. When you're happy, you somehow make the people around you happier too.
+<br><br>
+So whenever life gives you a reason to smile, please smile a little longer. Aapki smile bahut suit karti hai. 🌷
+<br><br>
+And if I ever get to be one of the reasons behind that smile, then honestly, that's already enough to make my day.
+<br><br>
+Khush raha karo, mera pyaraaa bachaaaa. 💐💗🥹</div>
+    </div>
+    <div class="env" style="--r:2deg" onclick="this.classList.toggle('open')">
+      <span class="env-icon">🌙</span>
+      <div class="env-label">Open at 3 AM</div>
+      <div class="env-peek">Tap to open...</div>
+      <div class="env-body">
+You're awake again, aren't you? 😤
+<br><br>
+First of all, jao aur thoda paani pee lo. Yes, right now. 🌷
+<br><br>
+And while you're at it, I want you to know something...
+
+No matter what kind of day you've had, no matter what's on your mind, there is someone who thinks you are absolutely wonderful.
+<br><br>
+Someone who loves your smile, your heart, your silly little moments, and even the way you scold him sometimes.
+
+So if tonight feels a little lonely or heavy, remember this:
+<br><br>
+Somewhere out there, someone thinks you're one of the most precious people they've ever known.
+<br><br>
+That someone is me. 🫶🌙</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ MOON ═══ -->
+<section class="moon-section reveal">
+  <div class="tag">🌙 The Sky Above Us</div>
+  <h2 class="section-title">Moon on <em>our dates</em></h2>
+  <div class="moon-grid">
+    <div class="moon-card">
+      <span class="moon-em">🌒</span>
+      <div class="moon-dt">First Message — Oct 8, 2024</div>
+      <div class="moon-ph">Waxing Crescent</div>
+      <div class="moon-mn">New beginnings. Something quietly building.</div>
+    </div>
+    <div class="moon-card">
+      <span class="moon-em">🌕</span>
+      <div class="moon-dt">Official — December 23, 2024 • 11:53</div>
+      <div class="moon-ph">Full Moon</div>
+      <div class="moon-mn">Complete. Whole. Just like how you make me feel.</div>
+    </div>
+    <div class="moon-card">
+      <span class="moon-em"> 🌔</span>
+      <div class="moon-dt">Your Birthday — March 30, 2011</div>
+      <div class="moon-ph">Waxing Gibbous</div>
+      <div class="moon-mn">The night the world got a little more beautiful. 🎂</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ DESTINATIONS ═══ -->
+<section class="dest-section reveal">
+  <div class="tag">🌍 Someday</div>
+  <h2 class="section-title">Places we'll <em>go together</em></h2>
+  <div class="dest-grid">
+    <div class="dest-card"><div class="dest-vis">🏔️</div><div class="dest-info"><div class="dest-name">Switzerland</div><div class="dest-note">Snow-covered Alps, fairy-tale villages, hot chocolate, and you beside me. A literal dream.</div></div></div>
+    <div class="dest-card"><div class="dest-vis">🌸</div><div class="dest-info"><div class="dest-name">Kyoto, Japan</div><div class="dest-note">Cherry blossoms, ancient temples, matcha at every corner. You'd fall in love with every single street.</div></div></div>
+    <div class="dest-card"><div class="dest-vis">🏔️</div><div class="dest-info"><div class="dest-name">Manali, India</div><div class="dest-note">Snow, chai, blankets, and you. That is genuinely the best combination imaginable.</div></div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ ACHIEVEMENTS ═══ -->
+<section class="ach-section reveal">
+  <div class="tag">🏆 Unlocked Together</div>
+  <h2 class="section-title">Our <em>achievements</em></h2>
+  <div class="ach-grid">
+    <div class="badge"><div class="badge-ic">💬</div><div class="badge-nm">First Hello</div><div class="badge-ds">Oct 8, 2024 · 3:32 PM</div><div class="badge-ul">✓ Unlocked</div></div>
+    <div class="badge"><div class="badge-ic">📞</div><div class="badge-nm">All-Nighter</div><div class="badge-ds">Called until the sun came up</div><div class="badge-ul">✓ Unlocked</div></div>
+    <div class="badge"><div class="badge-ic">💑</div><div class="badge-nm">Official</div><div class="badge-ds">Made it real ❤️</div><div class="badge-ul">✓ Unlocked</div></div>
+    <div class="badge"><div class="badge-ic">🎂</div><div class="badge-nm">Birthday Magic</div><div class="badge-ds">Made her birthday unforgettable</div><div class="badge-ul">✓ Unlocked</div></div>
+    <div class="badge locked"><div class="badge-ic">✈️</div><div class="badge-nm">First Trip</div><div class="badge-ds">Switzerland is waiting...</div></div>
+    <div class="badge locked"><div class="badge-ic">💍</div><div class="badge-nm">Forever</div><div class="badge-ds">The best one is still coming 🌸</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ SCRAPBOOK ═══ -->
+<section class="scrap-section reveal">
+  <div class="tag">🎞️ Polaroids</div>
+  <h2 class="section-title">Our little <em>scrapbook</em></h2>
+  <div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/2bf8832f-57e0-4503-a581-8a84ae4e6586.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Awww 🥹🌷🎀 mere boondi ke laddu 🤤 kitna cute lag raha hai 😳</div>
+</div>
+    <div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/3428eeda-5bbb-401d-aa6c-bb11fe43c4d3.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Hayyyeee reee.🥹✨ Nazar na lage mere is chote se, sweet se pocket-sized bomb ko! 😭🌷</div>
+</div>
+    <div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/a7641e99-13fe-43f7-a297-45a8f9be91d2.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">🏻Hayyyyyeeeeeee 😭💘🌷
+Kaun hai yeh itni pyari si princessss??? 🥹🎀
+Yeh aankhein hain ya direct dil pe attack karne ka weapon? 😭🤌🏻✨</div>
+</div>
+    <div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/386ac4db-e11a-444a-8280-b93cdbfae79e.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Awwwwwww merii chocolate brownieeeee 🍫🥹💞 Certified pookkiieee material 🌷💘🧸</div>
+</div>
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/67691fc0-db2d-4802-85f1-581bc3170cb7.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Hayeeee meriii chhoti si DON Sahebaaaa 😭💗👑</div>
+</div>
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/393d65f4-6a68-425e-83e7-ef67f22df333.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Stopppppp right noww i can'tt handlee itt anymoree 😭✋🏻💘 Meri Little Marshmallwwwww ☁️🥹💞</div>
+</div>
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/654ee2fd-0622-49e1-b9c8-bd5d3087e84b.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Oohhh my goshhh 😳🤒🌷🎀</div>
+</div>
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/94291a2e-8d2c-4385-a57c-c04948401af9.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">My Pretty Disaster 😩❤️‍🔥
+My Heart Thief 💘🫠
+My Doll Face 🎀🌷
+My Sunshine Girl ☀️💗
+My Angel Eyes 🥹✨
+My Dream Girl 🌙💘
+My Sweet Trouble 😭❤️‍🔥
+My Gorgeous Babieee 🌸💞</div>
+</div><div class="polaroid" style="--r:-2deg">
+  <div class="pol-img" style="aspect-ratio: 5/2; overflow: hidden;">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/812a3477-5248-46ed-867a-afa8cce63ede.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:2px;">
+  </div>
+  <div class="pol-note">Haye meri noor-e-nazar 🥹✨💞
+Aapki aankhein dekh ke us main dubne ka Mann karta hai uffff ye aapki pyaari aankhein 😭❤️🌷</div>
+</div>
+
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/ecdce080-7a2c-4667-a91a-16e6564cf798.png" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Ohohoho 😭✨ Merii chef master 🌷🎀😳</div>
+</div>
+<div class="polaroid" style="--r:-2deg">
+  <div class="pol-img">
+    <img loading="lazy" src="https://i.supaimg.com/50da11a0-aed4-4612-a192-3a96e5f5257b/ea2886fe-4a18-484b-96f5-39c8d53b89c6.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
+  </div>
+  <div class="pol-note">Areeeee meri shakkar ki pudiyaaaa 🥹🍯💞</div>
+</div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<div class="divider"></div>
+
+<!-- ═══ MY EDITS ═══ -->
+<section class="reveal" style="padding:6rem 2rem; max-width:1000px; margin:0 auto; text-align:center;">
+  <div class="tag">🎬 Made with love</div>
+  <h2 class="section-title">My edits, <em>just for you</em></h2>
+  <p style="font-size:0.82rem; color:var(--muted); font-style:italic; margin-bottom:3rem;">
+    Every edit I ever made because you deserved to be seen this way 🌸
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:2rem;">
+
+    <!-- Edit 1 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:4/3; position:relative;">
+        <video src="https://files.catbox.moe/rvjza9.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 1</p>
+        <p style="font-size:0.75rem; color:var(--muted);"><del>Tere</del> Aapke bin jee nahi lagta, <del>tere</del> Aapke bin jee nahi sakta 😭🤌💗</p>
+      </div>
+    </div>
+
+    <!-- Edit 2 — aur video add karne ke liye copy karo upar wala block -->
+    <!-- Streamable link badal do bas -->
+
+<div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative;">
+        <video src="https://files.catbox.moe/ots736.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 2</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Keh tu tumhe haan, dil mein aaj kya hai? 🌷🤍 <br><br>
+
+Aap ho. Bas aap. and Hamesha rahoge 🥹💗</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:3/4; position:relative;">
+        <video src="https://files.catbox.moe/kq5u5r.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 3</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Reason of My happiness in real life. 🥹🌷🤍</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative;">
+        <video src="https://files.catbox.moe/y1tuk9.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 4</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Mera duguuu 😭🤌💗🌷</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:3/4; position:relative;">
+        <video src="https://files.catbox.moe/jpfj7r.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 5</p>
+        <p style="font-size:0.75rem; color:var(--muted);">My dream girl. 🥹🎀💗✨</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative;">
+        <video src="https://files.catbox.moe/8ndzzo.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 6</p>
+        <p style="font-size:0.75rem; color:var(--muted);">But iss baar ladki ne fasa liya 😭😭🤌✨</p>
+      </div>
+    </div>
+    
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+  <div style="aspect-ratio:5/5; position:relative; background:#000;">
+    <video
+      src="https://files.catbox.moe/luup9k.mp4"
+      loop
+      playsinline
+      preload="none"
+      controls
+      style="width:100%; height:100%; object-fit:cover; display:block;">
+    </video>
+  </div>
+  <div style="padding:1rem;">
+    <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 7</p>
+    <p style="font-size:0.75rem; color:var(--muted);">Yahh always mine 😩😤</p>
+  </div>
+</div>
+    
+  
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative;">
+        <video src="https://files.catbox.moe/i42kvr.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 8</p>
+        <p style="font-size:0.75rem; color:var(--muted);">You feels like art. 🥹🤍✨🎀</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative;">
+        <video src="https://files.catbox.moe/m0x42q.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 9</p>
+        <p style="font-size:0.75rem; color:var(--muted);">May be I will one day 😭🎀🌷</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:1/1; position:relative;">
+        <video src="https://files.catbox.moe/u2n53h.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 10</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Baddie ❌
+Sakshat devi hai devi 😭🙏🌷👑✨</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative;">
+        <video src="https://files.catbox.moe/ea2sem.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 11</p>
+        <p style="font-size:0.75rem; color:var(--muted);">InshaAllah, God will bless us with the beautiful future we dream about 🤲🤍🌷✨</p>
+      </div>
+    </div>
+   <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative;">
+        <video src="https://files.catbox.moe/fdxn0l.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 12</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Uss one day😭🤍🌷 </p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:1/1; position:relative;">
+        <video src="https://files.catbox.moe/r6kgrn.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 13</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Always bachaaaa 😭🤌💗</p>
+      </div>
+    </div>
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative;">
+        <video src="https://files.catbox.moe/zu12vd.mp4" controls loop playsinline preload="none" style="width:100%; height:100%; position:absolute; top:0; left:0; border:none; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 14</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Hope you will feel it 🙂🫠</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ═══ MY EDITS — Part 2 ═══ -->
+<section class="reveal" style="padding:6rem 2rem; max-width:1000px; margin:0 auto; text-align:center;">
+  <div class="tag">🎬 Aur bhi edits</div>
+  <h2 class="section-title">More edits, <em>more love</em></h2>
+  <p style="font-size:0.82rem; color:var(--muted); font-style:italic; margin-bottom:3rem;">
+    Kyunki ek section toh kam tha 🌸✨ and you deserves even more than this bachaaaa
+  </p>
+
+  <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(280px,1fr)); gap:2rem;">
+
+    <!-- Edit 16 — 16:9 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/mxl2eq.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 15</p>
+        <p style="font-size:0.75rem; color:var(--muted);">AAAAAAAAAAAAAA 😭😭🤌🌷
+Finally meri fav edit aa gayiii 😭💗✨</p>
+      </div>
+    </div>
+
+    <!-- Edit 17 — 1:1 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:1/1; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/4pcead.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 16</p>
+        <p style="font-size:0.75rem; color:var(--muted);">You are always mine, mine, mine and only mine 😤🤍🌷</p>
+      </div>
+    </div>
+
+    <!-- Edit 18 — 16:9 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/cpfiwa.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 17</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Ummm... excuse me mohtarma 👉👈🥹🎀
+<br><br>
+Cannn I get a kiss? 😭💗🌷</p>
+      </div>
+    </div>
+
+    <!-- Edit 19 — 9:16 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/ibeb0c.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 18</p>
+        <p style="font-size:0.75rem; color:var(--muted);">That expression is doing something to my heart 😭🤌💗🌷 and whenever i see this video its gives me butterflies 🌚😭💗✨</p>
+      </div>
+    </div>
+
+    <!-- Edit 20 — 16:9 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/m5v0kz.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 19</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Ab toh der ho gayi... 😭🤌</p>
+      </div>
+    </div>
+
+    <!-- Edit 21 — 3:4 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:3/4; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/aloxlb.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 20</p>
+        <p style="font-size:0.75rem; color:var(--muted);">I can never go back from loving you 😭🤌💗🌷
+Not now. Not ever. The one and only thing i do fron my heart  </p>
+      </div>
+    </div>
+
+    <!-- Edit 22 — 16:9 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/zrym3d.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 21</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Yeah, I'm cooked. 😭🌷✨
+And I don't even want to be saved.</p>
+      </div>
+    </div>
+
+    <!-- Edit 23 — 9:16 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:9/16; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/cuw4jq.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 22</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Mera cutuuu patutuuuu 😭🎀💗✨</p>
+      </div>
+    </div>
+
+    <!-- Edit 24 — 16:9 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:16/9; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/7cgpl0.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 23</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Achhi lagti ho? 🥹🌷
+
+Nahi... bahut zyada achhi lagti ho. 😭🤌💗</p>
+      </div>
+    </div>
+
+    <!-- Edit 25 — 3:4 -->
+    <div style="background:white; border-radius:20px; overflow:hidden; box-shadow:0 8px 28px rgba(199,80,112,0.12); border:1px solid rgba(199,80,112,0.1);">
+      <div style="aspect-ratio:3/4; position:relative; background:#000;">
+        <video src="https://files.catbox.moe/lcqght.mp4" controls loop playsinline preload="none"
+          style="width:100%; height:100%; object-fit:cover; display:block;"></video>
+      </div>
+      <div style="padding:1rem;">
+        <p style="font-family:'Playfair Display',serif; font-size:1rem; color:var(--ink);">Edit 24</p>
+        <p style="font-size:0.75rem; color:var(--muted);">Malkinnn 😭🫀</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer id="siteFooter">
+  <div id="footerTwinkles"></div>
+  <span class="footer-names">Fatima Jiii<p>I lovvvvv youuu</p> </span>
+  <p class="footer-line">"In every universe, I'd still choose you. 🥹💗."</p>
+  <p class="footer-made">Made with infinite love ♾️ <span class="footer-heart-icon">💗</span></p>
+  <p class="footer-small">patience, and a little bit of obsession. 🌷✨🌸</p>
+</footer>
+
+<script>
+// ══════════════════════════════════════════
+// INTRO SPARKLE BURST (2-3 sec on page load)
+// ══════════════════════════════════════════
+(function(){
+  const burst = document.getElementById('introBurst');
+  const emojis = ['✨','💖','🌸','⭐','💫','🌟','💕','✦','🎀','💗','🌷'];
+  const count = 25;
+  for(let i = 0; i < count; i++){
+    const el = document.createElement('div');
+    el.className = 'burst-particle';
+    const angle = (i / count) * 360;
+    const dist = 80 + Math.random() * 200;
+    const bx = Math.cos(angle * Math.PI/180) * dist;
+    const by = Math.sin(angle * Math.PI/180) * dist;
+    const bx2 = bx * 2.5;
+    const by2 = by * 2.5;
+    el.style.cssText = `--bx:${bx}px;--by:${by}px;--bx2:${bx2}px;--by2:${by2}px;animation-delay:${Math.random()*0.5}s;font-size:${12+Math.random()*16}px`;
+    el.textContent = emojis[i % emojis.length];
+    burst.appendChild(el);
+  }
+  setTimeout(()=> burst.style.display='none', 3000);
+})();
+
+// ══════════════════════════════════════════
+// TWINKLING STARS BACKGROUND
+// ══════════════════════════════════════════
+(function(){
+  const bg = document.getElementById('starsBg');
+  const w = window.innerWidth, h = document.documentElement.scrollHeight;
+  for(let i = 0; i < 40; i++){
+    const el = document.createElement('div');
+    el.className = 'star-twinkle';
+    const size = 1 + Math.random() * 3;
+    el.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      width:${size}px;height:${size}px;
+      --td:${2+Math.random()*4}s;
+      --tdelay:${Math.random()*5}s;
+      background:rgba(${183+~~(Math.random()*60)},${100+~~(Math.random()*60)},${121+~~(Math.random()*60)},0.7);
+    `;
+    bg.appendChild(el);
+  }
+})();
+
+// ══════════════════════════════════════════
+// FLOATING SPARKLES (slow, ambient)
+// ══════════════════════════════════════════
+(function(){
+  const sparkles = ['✨','💫','⭐','✦','⋆','🌟'];
+  for(let i = 0; i < 8; i++){
+    const el = document.createElement('div');
+    el.className = 'sparkle-float';
+    el.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${20+Math.random()*70}%;
+      --sf:${10+Math.random()*12}px;
+      --sd:${5+Math.random()*8}s;
+      --sdelay:${Math.random()*8}s;
+    `;
+    el.textContent = sparkles[~~(Math.random()*sparkles.length)];
+    document.body.appendChild(el);
+  }
+})();
+
+// ══════════════════════════════════════════
+// HERO SPARKLES
+// ══════════════════════════════════════════
+(function(){
+  const hero = document.getElementById('heroSparkles');
+  const sp = ['✨','💖','🌸','💫','✦','⭐'];
+  for(let i = 0; i < 8; i++){
+    const el = document.createElement('div');
+    el.className = 'hero-sp';
+    el.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      --hs:${10+Math.random()*18}px;
+      --hd:${3+Math.random()*5}s;
+      --hdl:${Math.random()*6}s;
+    `;
+    el.textContent = sp[~~(Math.random()*sp.length)];
+    hero.appendChild(el);
+  }
+})();
+
+// ══════════════════════════════════════════
+// CURSOR TRAIL WITH TINY HEARTS
+// ══════════════════════════════════════════
+(function(){
+  const dot = document.getElementById('cursorDot');
+  const hearts = ['💖','💗','💕','✨','💫','🌸','♥'];
+  let lastX = 0, lastY = 0, trailCount = 0;
+
+  document.addEventListener('mousemove', e => {
+    dot.style.left = e.clientX + 'px';
+    dot.style.top = e.clientY + 'px';
+
+    const dx = e.clientX - lastX, dy = e.clientY - lastY;
+    if(Math.sqrt(dx*dx+dy*dy) > 18){
+      lastX = e.clientX; lastY = e.clientY;
+      if(trailCount < 60){
+        trailCount++;
+        const h = document.createElement('div');
+        h.className = 'heart-trail';
+        h.style.left = (e.clientX + (Math.random()-0.5)*16) + 'px';
+        h.style.top = (e.clientY + (Math.random()-0.5)*16) + 'px';
+        h.style.fontSize = (10+Math.random()*8) + 'px';
+        h.textContent = hearts[~~(Math.random()*hearts.length)];
+        document.body.appendChild(h);
+        setTimeout(()=>{ h.remove(); trailCount--; }, 800);
+      }
+    }
+  });
+
+  // Hide default cursor only on desktop
+  if(!('ontouchstart' in window)){
+    document.body.style.cursor = 'none';
+  } else {
+    dot.style.display = 'none';
+  }
+})();
+
+// ══════════════════════════════════════════
+// ENVELOPE LETTER ANIMATION
+// ══════════════════════════════════════════
+(function(){
+  const env = document.getElementById('envelopeOuter');
+  const hint = document.getElementById('envelopeHint');
+  if(!env) return;
+
+  let opened = false;
+  function openLetter(){
+    if(opened) return;
+    opened = true;
+    env.classList.add('opened');
+    // Mini confetti burst on open
+    confetti && confetti();
+  }
+
+  env && env.addEventListener('click', openLetter);
+  hint && hint.addEventListener('click', openLetter);
+  const flap = document.getElementById('envelopeFlap');
+  flap && flap.addEventListener('click', openLetter);
+})();
+
+// ══════════════════════════════════════════
+// FOOTER TWINKLING HEARTS
+// ══════════════════════════════════════════
+(function(){
+  const footer = document.getElementById('footerTwinkles');
+  if(!footer) return;
+  const items = ['💗','💖','💕','✨','🌸','💫','♥','⭐'];
+  for(let i = 0; i < 10; i++){
+    const el = document.createElement('div');
+    el.className = 'footer-twinkle';
+    el.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      --fs:${10+Math.random()*10}px;
+      --ft:${1.5+Math.random()*2}s;
+      --fd:${Math.random()*3}s;
+    `;
+    el.textContent = items[~~(Math.random()*items.length)];
+    footer.appendChild(el);
+  }
+})();
+
+// ── PETALS ──
+(function(){
+  const c=document.getElementById('petals');
+  const em=['🌸','🌺','🌷','💮','✿','❀'];
+  for(let i=0;i<10;i++){
+    const p=document.createElement('div');
+    p.className='petal';
+    p.textContent=em[i%em.length];
+    p.style.cssText=`left:${Math.random()*100}%;--d:${8+Math.random()*8}s;--delay:${Math.random()*10}s`;
+    c.appendChild(p);
+  }
+})();
+
+// ── COUNTER ──
+const start=new Date('2024-10-08T15:32:00');
+function tick(){
+  const d=Date.now()-start;
+  const days=Math.floor(d/86400000);
+  const hrs=Math.floor((d%86400000)/3600000);
+  const mins=Math.floor((d%3600000)/60000);
+  const secs=Math.floor((d%60000)/1000);
+  document.getElementById('cDays').textContent=days.toLocaleString();
+  document.getElementById('cHours').textContent=hrs;
+  document.getElementById('cMins').textContent=mins;
+  document.getElementById('cSecs').textContent=secs;
+}
+tick(); setInterval(tick,1000);
+
+// ── SCROLL REVEAL ──
+const ro=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      e.target.classList.add('vis');
+      e.target.querySelectorAll('.tl-item').forEach((t,i)=>setTimeout(()=>t.classList.add('vis'),i*180));
+    }
+  });
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+
+// ── MUSIC ──
+const tracks=['1eAPZnlyYcGo0KfNFVRgUJ','0tgVpDi06FyKpA1z0VMD4v','4l4u9pFQY0PBPoTHABdC4t','2ctvdKmETyOzPb2GiJJT53'];
+function playSong(i){
+  document.querySelectorAll('.s-card').forEach((c,j)=>{
+    c.classList.toggle('playing',j===i);
+    document.getElementById('pb'+j).textContent=j===i?'⏸':'▶';
+  });
+  document.getElementById('spEmbed').src=`https://open.spotify.com/embed/track/${tracks[i]}?utm_source=generator&theme=0&autoplay=1`;
+}
+
+// ── WHEEL ──
+const segs=['Handwritten Letter 💌','Surprise Voice Note 🎙️','24hr Love Bombing 💕','Romantic Call Tonight 📞','Virtual Movie Night 🎬','Long Voice Message 🥹','Ek Poem for You 📝','30 Reasons You\'re Amazing ✨'];
+const wColors=['#e8879a','#d4889a','#c9a96e','#c75070','#f0a0b0','#d4b88a','#b87090','#e0c0ca'];
+const cvs=document.getElementById('wheelCvs');
+const cx=cvs.getContext('2d');
+let wAngle=0,wSpin=false;
+
+function drawWheel(rot){
+  cx.clearRect(0,0,300,300);
+  const n=segs.length, arc=(2*Math.PI)/n;
+  for(let i=0;i<n;i++){
+    cx.beginPath(); cx.moveTo(150,150);
+    cx.arc(150,150,145,rot+i*arc,rot+(i+1)*arc);
+    cx.fillStyle=wColors[i]; cx.fill();
+    cx.strokeStyle='rgba(255,255,255,0.2)'; cx.lineWidth=1.5; cx.stroke();
+    cx.save(); cx.translate(150,150);
+    cx.rotate(rot+i*arc+arc/2);
+    cx.textAlign='right'; cx.fillStyle='rgba(255,255,255,0.95)';
+    cx.font='500 10px Lato'; cx.fillText(segs[i],138,4);
+    cx.restore();
+  }
+  cx.beginPath(); cx.arc(150,150,20,0,2*Math.PI);
+  cx.fillStyle='#fdf3f6'; cx.fill();
+  cx.strokeStyle='rgba(199,80,112,0.4)'; cx.lineWidth=2; cx.stroke();
+}
+drawWheel(0);
+
+function spinWheel(){
+  if(wSpin)return;
+  wSpin=true;
+  document.getElementById('spinRes').textContent='';
+  const spins=(5+Math.random()*5)*2*Math.PI;
+  const dur=4500, t0=performance.now(), a0=wAngle;
+  function anim(now){
+    const p=Math.min((now-t0)/dur,1);
+    const e=1-Math.pow(1-p,4);
+    wAngle=a0+spins*e; drawWheel(wAngle);
+    if(p<1){requestAnimationFrame(anim);}
+    else{
+      wSpin=false;
+      const arc=(2*Math.PI)/segs.length;
+      const norm=((wAngle%(2*Math.PI))+2*Math.PI)%(2*Math.PI);
+      const ptr=(3*Math.PI/2);
+      const off=((ptr-norm)%(2*Math.PI)+2*Math.PI)%(2*Math.PI);
+      const idx=Math.floor(off/arc)%segs.length;
+      document.getElementById('spinRes').textContent='🎉 '+segs[idx];
+      confetti();
+    }
+  }
+  requestAnimationFrame(anim);
+}
+
+// ── SCRATCH ──
+(function(){
+  const sc = document.getElementById('scratchCvs');
+  if (!sc) return; // Background error handling
+  
+  const sx = sc.getContext('2d');
+  let scratching = false;
+  
+  // 🛠️ CHANGE 1: Ab size strictly 240x426 (9:16) par lock hai
+  const w = 240;
+  const h = 426;
+  
+  // CHANGE 2: Gradient ko vertical box ke hisab se stretch kiya
+  const g = sx.createLinearGradient(0, 0, w, h);
+  g.addColorStop(0, '#e8879a'); 
+  g.addColorStop(0.5, '#c75070'); 
+  g.addColorStop(1, '#a03050');
+  sx.fillStyle = g; sx.fillRect(0, 0, w, h);
+  
+  // CHANGE 3: Sparkle stars pure lambaai (h = 426) tak failenge
+  for(let y = 0; y < h; y += 18) {
+    for(let x = 0; x < w; x += 18) {
+      sx.fillStyle = 'rgba(255,255,255,0.04)'; 
+      sx.beginPath(); 
+      sx.arc(x, y, 2, 0, Math.PI * 2); 
+      sx.fill();
+    }
+  }
+  
+  // CHANGE 4: Text ko vertical box ke bilkul CENTER (w/2, h/2) par laya gaya hai
+  sx.fillStyle = 'rgba(255,255,255,0.9)'; 
+  sx.font = 'bold 15px Lato'; 
+  sx.textAlign = 'center';
+  sx.fillText('✦ Scratch Here ✦', w / 2, h / 2 - 5);
+  
+  sx.font = '11px Lato'; 
+  sx.fillStyle = 'rgba(255,255,255,0.6)';
+  sx.fillText('A magical memory awaits...', w / 2, h / 2 + 16);
+
+  // CHANGE 5: Touch coordinates calculation ko naye size se math kiya
+  function pos(e){
+    const r = sc.getBoundingClientRect();
+    const sx2 = w / r.width;
+    const sy2 = h / r.height;
+    const s = e.touches ? e.touches[0] : e;
+    return { x: (s.clientX - r.left) * sx2, y: (s.clientY - r.top) * sy2 };
+  }
+  
+  function scratch(x, y){
+    sx.globalCompositeOperation = 'destination-out';
+    sx.beginPath(); 
+    sx.arc(x, y, 24, 0, Math.PI * 2); // Perfect circular brush
+    sx.fill();
+    sx.globalCompositeOperation = 'source-over';
+    
+    // CHANGE 6: Scratch percentage pure naye 240x426 data se scan hoga
+    const d = sx.getImageData(0, 0, w, h).data;
+    let c = 0; 
+    for(let i = 3; i < d.length; i += 4) {
+      if(d[i] === 0) c++;
+    }
+    const pct = Math.round(c / (w * h) * 100);
+    
+    const el = document.getElementById('scratchPct');
+    if(el) {
+      if(pct > 45){ 
+        sx.clearRect(0, 0, w, h); // 45% scratch hote hi poori photo saaf dikhegi
+        el.textContent = 'Awwww 😭🌷 mera bachhaaa 🎀😳!';
+      }
+      else if(pct > 4) {
+        el.textContent = pct + '% scratched — keep going...';
+      }
+    }
+  }
+  
+  // Event Listeners
+  sc.addEventListener('mousedown', e => { scratching = true; const p = pos(e); scratch(p.x, p.y); });
+  sc.addEventListener('mousemove', e => { if(!scratching) return; const p = pos(e); scratch(p.x, p.y); });
+  sc.addEventListener('mouseup', () => scratching = false);
+  sc.addEventListener('touchstart', e => { 
+    e.preventDefault(); 
+    scratching = true; 
+    const p = pos(e); 
+    scratch(p.x, p.y); 
+  }, { passive: false });
+  
+  sc.addEventListener('touchmove', e => { 
+    e.preventDefault(); 
+    if(!scratching) return; 
+    const p = pos(e); 
+    scratch(p.x, p.y); 
+  }, { passive: false });
+  
+  sc.addEventListener('touchend', () => scratching = false);
+})();
+
+
+// ── COMPAT ──
+const ans=[null,null,null,null,null];
+function pick(el,q,s){
+  el.parentElement.querySelectorAll('.cq-opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel'); ans[q]=s;
+}
+function calcCompat(){
+  if(ans.includes(null)){alert('Please answer all 5 questions 💕');return;}
+  const total=ans.reduce((a,b)=>a+b,0);
+  const dims=[
+    {l:'Love & Attachment',s:Math.min(100,ans[0]*30+10+~~(Math.random()*10))},
+    {l:'Communication',s:Math.min(100,ans[4]*28+15+~~(Math.random()*8))},
+    {l:'Fun & Laughter',s:Math.min(100,ans[2]*30+10+~~(Math.random()*10))},
+    {l:'Care & Empathy',s:Math.min(100,ans[1]*30+10+~~(Math.random()*10))},
+    {l:'Comfort Level',s:Math.min(100,ans[3]*30+10+~~(Math.random()*8))},
+  ];
+  const avg=Math.round(dims.reduce((s,d)=>s+d.s,0)/dims.length);
+  const score=Math.min(99,Math.max(55,avg));
+  const verdicts=[
+    {min:90,v:'Soulmates ✨',d:'This kind of love is rare. You two are the real thing.'},
+    {min:75,v:'Deeply Connected 💗',d:'Strong, warm, and real. You understand each other in ways most never find.'},
+    {min:60,v:'Growing Together 🌱',d:'Beautiful potential here. Every great love keeps growing.'},
+    {min:0, v:'Just Beginning 🌸',d:'Every great love story starts somewhere. Keep showing up.'},
+  ];
+  const {v,d}=verdicts.find(x=>score>=x.min);
+  const res=document.getElementById('compatRes');
+  res.classList.add('show');
+  document.getElementById('cVerdict').textContent=v;
+  document.getElementById('cDesc').textContent=d;
+  setTimeout(()=>{document.getElementById('ringFill').style.strokeDashoffset=314-(314*score/100);},100);
+  let cur=0;const t=setInterval(()=>{cur=Math.min(cur+2,score);document.getElementById('ringNum').textContent=cur+'%';if(cur>=score)clearInterval(t);},25);
+  const bars=document.getElementById('cBars');
+  bars.innerHTML='';
+  dims.forEach(({l,s})=>{bars.innerHTML+=`<div class="cbi"><div class="cbh"><span class="cbl">${l}</span><span class="cbp">${s}%</span></div><div class="cbt"><div class="cbf" style="width:0" data-w="${s}"></div></div></div>`;});
+  setTimeout(()=>bars.querySelectorAll('.cbf').forEach(b=>b.style.width=b.dataset.w+'%'),200);
+  res.scrollIntoView({behavior:'smooth',block:'nearest'});
+  if(score>=75)confetti();
+}
+
+// ── CONFETTI ──
+function confetti(){
+  const cols=['#e8879a','#c9a96e','#c75070','#f5c0d0','#fff0f5'];
+  for(let i=0;i<70;i++){
+    const c=document.createElement('div');
+    c.style.cssText=`position:fixed;width:8px;height:8px;top:-10px;left:${Math.random()*100}vw;background:${cols[~~(Math.random()*cols.length)]};border-radius:${Math.random()>.5?'50%':'2px'};pointer-events:none;z-index:9999;animation:confettiFall ${2+Math.random()*2}s ${Math.random()*.5}s ease-in forwards`;
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3500);
+  }
+}
+const cStyle=document.createElement('style');
+cStyle.textContent='@keyframes confettiFall{0%{opacity:1;transform:translateY(0) rotate(0)}100%{opacity:0;transform:translateY(100vh) rotate(720deg)}}';
+document.head.appendChild(cStyle);
+</script>
+</body>
+</html>
